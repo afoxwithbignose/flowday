@@ -26,11 +26,24 @@ jobs:
           curl -fsSL -o /tmp/gradle.zip https://services.gradle.org/distributions/gradle-8.10.2-bin.zip
           unzip -q /tmp/gradle.zip -d /tmp
 
-      - name: Build APK
-        run: /tmp/gradle-8.10.2/bin/gradle -p android assembleDebug --no-daemon
+      - name: Prepare release signing key
+        env:
+          KS_B64: ${{ secrets.FLOWDAY_KEYSTORE_B64 }}
+          STORE_PASSWORD: ${{ secrets.FLOWDAY_STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.FLOWDAY_KEY_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.FLOWDAY_KEY_ALIAS }}
+        run: |
+          echo "$KS_B64" | base64 -d > "$RUNNER_TEMP/flowday.keystore"
+          echo "STORE_FILE=$RUNNER_TEMP/flowday.keystore" >> "$GITHUB_ENV"
+          echo "STORE_PASSWORD=$STORE_PASSWORD" >> "$GITHUB_ENV"
+          echo "KEY_PASSWORD=$KEY_PASSWORD" >> "$GITHUB_ENV"
+          echo "KEY_ALIAS=$KEY_ALIAS" >> "$GITHUB_ENV"
+
+      - name: Build release APK
+        run: /tmp/gradle-8.10.2/bin/gradle -p android assembleRelease --no-daemon
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: flowday-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          path: android/app/build/outputs/apk/release/app-release.apk
