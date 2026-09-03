@@ -1,0 +1,50 @@
+name: Build FlowDay APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'android/**'
+      - '.github/workflows/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install Gradle 8.10.2
+        run: |
+          curl -fsSL -o /tmp/gradle.zip https://services.gradle.org/distributions/gradle-8.10.2-bin.zip
+          unzip -q /tmp/gradle.zip -d /tmp
+
+      - name: Create signing key
+        run: |
+          echo "STORE_PASSWORD=$(openssl rand -hex 16)" >> "$GITHUB_ENV"
+          echo "KEY_PASSWORD=$(openssl rand -hex 16)" >> "$GITHUB_ENV"
+          keytool -genkeypair -v -keystore "$RUNNER_TEMP/flowday.keystore" \
+            -alias flowday -keyalg RSA -keysize 2048 -validity 10950 \
+            -storepass "$STORE_PASSWORD" -keypass "$KEY_PASSWORD" \
+            -dname "CN=FlowDay, OU=Personal, O=FlowDay, L=Home, ST=Home, C=CN"
+
+      - name: Build release APK
+        run: /tmp/gradle-8.10.2/bin/gradle -p android assembleRelease --no-daemon
+        env:
+          STORE_FILE: ${{ runner.temp }}/flowday.keystore
+          STORE_PASSWORD: ${{ env.STORE_PASSWORD }}
+          KEY_ALIAS: flowday
+          KEY_PASSWORD: ${{ env.KEY_PASSWORD }}
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: flowday-apk
+          path: android/app/build/outputs/apk/release/app-release.apk
