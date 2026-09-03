@@ -28,8 +28,10 @@ jobs:
 
       - name: Create signing key
         run: |
-          echo "STORE_PASSWORD=$(openssl rand -hex 16)" >> "$GITHUB_ENV"
-          echo "KEY_PASSWORD=$(openssl rand -hex 16)" >> "$GITHUB_ENV"
+          STORE_PASSWORD=$(openssl rand -hex 16)
+          KEY_PASSWORD=$(openssl rand -hex 16)
+          echo "STORE_PASSWORD=$STORE_PASSWORD" >> "$GITHUB_ENV"
+          echo "KEY_PASSWORD=$KEY_PASSWORD" >> "$GITHUB_ENV"
           keytool -genkeypair -v -keystore "$RUNNER_TEMP/flowday.keystore" \
             -alias flowday -keyalg RSA -keysize 2048 -validity 10950 \
             -storepass "$STORE_PASSWORD" -keypass "$KEY_PASSWORD" \
