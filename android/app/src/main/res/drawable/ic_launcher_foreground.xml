@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- simple white "flow" mark on the FlowDay indigo background -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,44 h34 a6,6 0,0 1 0,12 h-34 a6,6 0,0 1 0,-12 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,64 h48 a6,6 0,0 1 0,12 h-48 a6,6 0,0 1 0,-12 z" />
+    <path
+        android:fillColor="#DCE1FF"
+        android:pathData="M44,26 h20 a6,6 0,0 1 0,12 h-20 a6,6 0,0 1 0,-12 z" />
+</vector>
