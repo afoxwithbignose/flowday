@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
         web = new WebView(this);
         WebSettings s = web.getSettings();
         s.setJavaScriptEnabled(true);
+        s.setDefaultTextEncodingName("UTF-8");
         s.setDomStorageEnabled(true);
         s.setDatabaseEnabled(true);
         s.setAllowFileAccess(true);
@@ -34,7 +35,7 @@ public class MainActivity extends Activity {
         s.setLoadWithOverviewMode(true);
         s.setUseWideViewPort(true);
         s.setSupportZoom(false);
-        // ?? WebView ??????????/?????????? App ??????
+        // 禁止 WebView 自带的“长按文字选择/复制”菜单，避免干扰 App 内的长按手势
         web.setLongClickable(false);
 
         // FlowDay is a self-contained local page. These flags let its own
@@ -55,7 +56,7 @@ public class MainActivity extends Activity {
                 filePathCallback = callback;
                 try {
                     startActivityForResult(
-                            Intent.createChooser(params.createIntent(), "????"),
+                            Intent.createChooser(params.createIntent(), "选择文件"),
                             REQ_FILE_CHOOSER);
                 } catch (Exception e) {
                     filePathCallback = null;
