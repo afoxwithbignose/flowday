@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.application'
+}
+
+def env = System.getenv()
+def hasSigning = env.STORE_FILE && env.STORE_PASSWORD && env.KEY_ALIAS && env.KEY_PASSWORD
+
+android {
+    namespace 'com.flowday.app'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.flowday.app'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+
+    signingConfigs {
+        release {
+            if (hasSigning) {
+                storeFile file(env.STORE_FILE)
+                storePassword env.STORE_PASSWORD
+                keyAlias env.KEY_ALIAS
+                keyPassword env.KEY_PASSWORD
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig = hasSigning ? signingConfigs.release : null
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
