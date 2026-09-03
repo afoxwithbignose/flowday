@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>FlowDay · 日程管理</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◍</text></svg>">
+<title>FlowDay ? ????</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>?</text></svg>">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{
@@ -41,7 +41,7 @@ input{font-family:inherit;color:inherit}
 input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .glass{background:var(--card);backdrop-filter:blur(18px) saturate(1.35);-webkit-backdrop-filter:blur(18px) saturate(1.35);border:1px solid var(--line);box-shadow:var(--shadow-sm)}
 
-/* ===== 顶栏 ===== */
+/* ===== ?? ===== */
 .topbar{
   position:fixed;top:0;left:0;right:0;height:var(--top-h);z-index:50;
   display:flex;align-items:center;justify-content:space-between;gap:14px;
@@ -61,7 +61,7 @@ input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline
 .theme-btn{width:38px;height:38px;border-radius:12px;background:var(--card-strong);border:1px solid var(--line);font-size:16px;display:grid;place-items:center;transition:.25s;box-shadow:var(--shadow-sm)}
 .theme-btn:hover{transform:translateY(-2px) rotate(12deg);box-shadow:var(--shadow)}
 
-/* ===== 侧边栏 ===== */
+/* ===== ??? ===== */
 .sidebar{position:fixed;left:14px;top:calc(var(--top-h) + 14px);bottom:14px;width:var(--side-w);border-radius:20px;display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 6px;z-index:60}
 .nav-btn{width:48px;height:48px;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--text-2);transition:.25s;position:relative}
 .nav-btn svg{width:20px;height:20px}
@@ -71,7 +71,7 @@ input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline
 .nav-btn.active::before{content:"";position:absolute;left:-9px;top:12px;bottom:12px;width:3.5px;border-radius:4px;background:linear-gradient(180deg,var(--accent),var(--accent-2))}
 .nav-btn.nav-import{margin-top:auto}
 
-/* ===== 主区域 ===== */
+/* ===== ??? ===== */
 .main{margin-left:calc(var(--side-w) + 28px);padding:calc(var(--top-h) + 24px) 24px 44px;max-width:1020px}
 .module{display:none}
 .module.active{display:block;animation:fadeSlide .38s cubic-bezier(.2,.8,.25,1)}
@@ -89,7 +89,7 @@ input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline
 .btn-ghost{padding:10px 22px;border-radius:12px;border:1px solid var(--line);background:var(--card-strong);font-size:13px;font-weight:600;color:var(--text-2);transition:.2s}
 .btn-ghost:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm);color:var(--text)}
 
-/* ===== 今日日程 ===== */
+/* ===== ???? ===== */
 .ring-card{display:flex;align-items:center;gap:28px;padding:22px 28px;border-radius:var(--r-lg);margin-bottom:16px}
 .ring-wrap{position:relative;width:132px;height:132px;flex:none}
 .ring{position:absolute;inset:0;width:132px;height:132px;transform:rotate(-90deg)}
@@ -137,7 +137,7 @@ input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline
 .up-chip{display:flex;align-items:center;gap:6px;margin-top:12px;padding:10px 14px;border-radius:var(--r-md);background:rgba(91,108,255,.08);border:1px dashed rgba(91,108,255,.35);font-size:12.5px;color:var(--accent);cursor:pointer;transition:.25s;width:100%}
 .up-chip:hover{background:rgba(91,108,255,.15);transform:translateY(-1px)}
 
-/* ===== 日历 ===== */
+/* ===== ?? ===== */
 .cal-card{padding:20px;border-radius:var(--r-lg);margin-bottom:16px}
 .cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;gap:8px}
 .cal-arrow{width:34px;height:34px;flex:none;border-radius:10px;border:1px solid var(--line);background:var(--card-strong);font-size:18px;transition:.2s;display:grid;place-items:center}
@@ -167,7 +167,7 @@ input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline
 .task-add.mini{padding:6px 12px;margin-bottom:12px}
 .task-add.mini button{padding:7px 14px;font-size:12.5px}
 
-/* ===== 记账 ===== */
+/* ===== ?? ===== */
 .import-entry{display:flex;align-items:center;gap:6px;padding:9px 16px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;font-size:13px;font-weight:700;box-shadow:0 6px 16px rgba(91,108,255,.3);transition:.25s}
 .import-entry:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(91,108,255,.42)}
 .module-actions{display:flex;gap:10px;flex-wrap:wrap}
@@ -287,7 +287,7 @@ select:focus{border-color:var(--accent)}
 .rec-day-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px;padding:12px 4px 6px;font-size:12px;font-weight:700;color:var(--text-2)}
 .rec-day-sub{font-size:11px;font-weight:600;color:var(--text-3)}
 
-/* ===== 专注番茄 ===== */
+/* ===== ???? ===== */
 .focus-card{padding:28px 20px 24px;border-radius:var(--r-lg);display:flex;flex-direction:column;align-items:center;gap:18px;margin-bottom:16px}
 .focus-ring-wrap{position:relative;width:250px;height:250px}
 #focusSvg{width:100%;height:100%;transform:rotate(-90deg)}
@@ -311,7 +311,7 @@ select:focus{border-color:var(--accent)}
 .fs-item b{display:block;font-size:21px;font-variant-numeric:tabular-nums;color:var(--accent)}
 .fs-item span{font-size:11.5px;color:var(--text-3)}
 
-/* ===== 导入面板 ===== */
+/* ===== ???? ===== */
 .import-panel{display:flex;flex-direction:column;gap:16px}
 .import-main{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;align-items:stretch}
 .drop-zone{border:2px dashed rgba(91,108,255,.45);border-radius:var(--r-lg);padding:44px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;cursor:pointer;transition:.25s;background:rgba(91,108,255,.04)}
@@ -348,7 +348,7 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
 .result-more{font-size:11.5px;color:var(--text-3);text-align:center}
 .result-actions{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
 
-/* ===== 弹层 ===== */
+/* ===== ?? ===== */
 .overlay{position:fixed;inset:0;background:rgba(15,20,40,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);z-index:100;display:flex;align-items:center;justify-content:center;padding:20px;animation:fadeIn .25s ease}
 .overlay[hidden]{display:none!important}
 .modal-box{width:min(920px,96vw);max-height:88vh;overflow:auto;padding:20px 22px;border-radius:24px;box-shadow:0 30px 80px rgba(0,0,0,.3);animation:popIn .32s cubic-bezier(.2,.9,.3,1.15)}
@@ -359,8 +359,9 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes popIn{from{opacity:0;transform:scale(.94) translateY(14px)}to{opacity:1;transform:none}}
 
-/* ===== 优先级菜单 / Toast ===== */
+/* ===== ????? / Toast ===== */
 .pri-popup{position:fixed;z-index:200;background:var(--card-strong);backdrop-filter:blur(20px);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:8px;display:flex;flex-direction:column;gap:2px;min-width:132px;animation:popIn .22s ease}
+.pri-popup{max-height:calc(100vh - 20px);overflow-y:auto}
 .pri-popup b{font-size:11px;color:var(--text-3);padding:4px 10px 6px;font-weight:600}
 .pri-popup button{text-align:left;padding:8px 10px;border-radius:9px;font-size:13px;font-weight:600;transition:.15s}
 .pri-popup button:hover{background:rgba(91,108,255,.1)}
@@ -412,15 +413,15 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
 .toast-wrap{position:fixed;top:84px;right:22px;z-index:300;display:flex;flex-direction:column;gap:10px;pointer-events:none}
 .toast{display:flex;align-items:center;gap:8px;background:rgba(31,39,51,.93);color:#fff;padding:12px 18px;border-radius:14px;font-size:13.5px;box-shadow:0 14px 34px rgba(0,0,0,.3);animation:toastIn .35s cubic-bezier(.2,.9,.3,1.2);max-width:340px}
 .toast.out{animation:toastOut .3s ease forwards}
-.toast.ok::before{content:"✓";color:#34d399;font-weight:800}
-.toast.err::before{content:"✕";color:#fb7185;font-weight:800}
-.toast.info::before{content:"ℹ";color:#60a5fa;font-weight:800}
+.toast.ok::before{content:"?";color:#34d399;font-weight:800}
+.toast.err::before{content:"?";color:#fb7185;font-weight:800}
+.toast.info::before{content:"?";color:#60a5fa;font-weight:800}
 .toast-act{margin-left:12px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);border-radius:8px;padding:4px 12px;font-size:12px;font-weight:700;color:#fff;transition:.15s;flex:none}
 .toast-act:hover{background:rgba(255,255,255,.34)}
 @keyframes toastIn{from{opacity:0;transform:translateX(46px)}to{opacity:1;transform:none}}
 @keyframes toastOut{to{opacity:0;transform:translateX(46px)}}
 
-/* ===== 响应式 ===== */
+/* ===== ??? ===== */
 @media (max-width:900px){
   :root{--top-h:60px}
   .topbar{padding:0 14px}
@@ -428,11 +429,11 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
   .greeting{display:none}
   .clock{font-size:18px}
   .date-line{font-size:10.5px}
-  .sidebar{left:0;right:0;top:auto;bottom:0;height:60px;width:auto;flex-direction:row;justify-content:space-around;border-radius:18px 18px 0 0;padding:4px 6px;gap:0}
+  .sidebar{left:0;right:0;top:auto;bottom:0;height:calc(60px + env(safe-area-inset-bottom));width:auto;flex-direction:row;justify-content:space-around;border-radius:18px 18px 0 0;padding:4px 6px calc(4px + env(safe-area-inset-bottom));gap:0}
   .nav-btn{width:56px;height:52px}
   .nav-btn.active::before{display:none}
   .nav-btn.nav-import{margin-top:0}
-  .main{margin-left:0;padding:calc(var(--top-h) + 16px) 14px 96px}
+  .main{margin-left:0;padding:calc(var(--top-h) + 16px) 14px calc(96px + env(safe-area-inset-bottom))}
   .stat-row{grid-template-columns:repeat(3,1fr);gap:8px}
   .stat-card{padding:14px 12px}
   .stat-card b{font-size:20px}
@@ -442,8 +443,8 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
   .ring-card{flex-direction:column;gap:16px;text-align:center;padding:20px}
   .ring-side{gap:44px}
   .clock-block{display:none}
-  .ai-fab{right:14px;bottom:76px}
-  .ai-panel{right:14px;left:14px;width:auto;bottom:86px;max-height:calc(100vh - 120px)}
+  .ai-fab{right:14px;bottom:calc(76px + env(safe-area-inset-bottom))}
+  .ai-panel{right:14px;left:14px;width:auto;bottom:calc(86px + env(safe-area-inset-bottom));max-height:calc(100vh - 120px - env(safe-area-inset-bottom))}
   .donut-wrap{justify-content:center}
 }
 @media (max-width:430px){
@@ -468,8 +469,8 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
 
 <header class="topbar">
   <div class="brand">
-    <div class="logo">◍</div>
-    <div class="brand-text"><b>FlowDay</b><span>日程 · 记账 · 专注</span></div>
+    <div class="logo">?</div>
+    <div class="brand-text"><b>FlowDay</b><span>?? ? ?? ? ??</span></div>
   </div>
   <div class="greeting" id="greeting"></div>
   <div class="top-right">
@@ -477,46 +478,46 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
       <div class="clock" id="clock">--:--:--</div>
       <div class="date-line" id="todayDate"></div>
     </div>
-    <button class="theme-btn" id="backupBtn" title="数据备份 / 恢复">💾</button>
-    <button class="theme-btn" id="themeBtn" title="切换深浅色">🌙</button>
+    <button class="theme-btn" id="backupBtn" title="???? / ??">??</button>
+    <button class="theme-btn" id="themeBtn" title="?????">??</button>
   </div>
 </header>
 
 <nav class="sidebar glass" id="sidebar">
-  <button class="nav-btn active" data-module="tasks" title="今日日程">
+  <button class="nav-btn active" data-module="tasks" title="????">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.4l2.5 2.5 4.8-5.2"/></svg>
-    <span>日程</span>
+    <span>??</span>
   </button>
-  <button class="nav-btn" data-module="calendar" title="日历">
+  <button class="nav-btn" data-module="calendar" title="??">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="16" rx="3"/><path d="M3.5 9.5h17M8.5 3v4M15.5 3v4"/></svg>
-    <span>日历</span>
+    <span>??</span>
   </button>
-  <button class="nav-btn" data-module="money" title="记账本">
+  <button class="nav-btn" data-module="money" title="???">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="6" width="17" height="13" rx="3"/><path d="M3.5 9.5h17M16.8 13.5h.1"/></svg>
-    <span>记账</span>
+    <span>??</span>
   </button>
-  <button class="nav-btn" data-module="focus" title="专注番茄">
+  <button class="nav-btn" data-module="focus" title="????">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 10v3.6l2.6 2.2M9.5 3.5h5"/></svg>
-    <span>专注</span>
+    <span>??</span>
   </button>
-  <button class="nav-btn nav-import" data-module="import" title="导入账单">
+  <button class="nav-btn nav-import" data-module="import" title="????">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15.5V4.5m0 0L8 8.5m4-4l4 4"/><path d="M4.5 15.5v2.5a2 2 0 002 2h11a2 2 0 002-2v-2.5"/></svg>
-    <span>导入</span>
+    <span>??</span>
   </button>
 </nav>
 
 <main class="main">
-  <!-- 今日日程 -->
+  <!-- ???? -->
   <section class="module active" id="module-tasks">
     <div class="module-head">
       <div>
-        <h2>今日日程</h2>
-        <p class="module-sub" id="taskSub">新的一天，从列好计划开始</p>
+        <h2>????</h2>
+        <p class="module-sub" id="taskSub">????????????</p>
       </div>
       <div class="seg" id="taskFilters">
-        <button data-f="all" class="on">全部</button>
-        <button data-f="todo">进行中</button>
-        <button data-f="done">已完成</button>
+        <button data-f="all" class="on">??</button>
+        <button data-f="todo">???</button>
+        <button data-f="done">???</button>
       </div>
     </div>
     <div class="ring-card glass">
@@ -525,44 +526,44 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
           <circle class="ring-track" cx="60" cy="60" r="52"/>
           <circle class="ring-bar" id="ringBar" cx="60" cy="60" r="52"/>
         </svg>
-        <div class="ring-center"><b id="ringPct">0%</b><span id="ringDone">0/0 完成</span></div>
+        <div class="ring-center"><b id="ringPct">0%</b><span id="ringDone">0/0 ??</span></div>
       </div>
       <div class="ring-side">
-        <div class="ring-num"><b id="taskTotal">0</b><span>今日任务</span></div>
-        <div class="ring-num"><b id="taskDoneNum">0</b><span>已完成</span></div>
+        <div class="ring-num"><b id="taskTotal">0</b><span>????</span></div>
+        <div class="ring-num"><b id="taskDoneNum">0</b><span>???</span></div>
       </div>
     </div>
     <form class="task-add glass" id="taskForm">
-      <span class="add-ico">＋</span>
-      <input id="taskInput" placeholder="输入任务，回车添加 · 试试「明天下午3点开会」" autocomplete="off"/>
-      <button type="submit">添加</button>
+      <span class="add-ico">?</span>
+      <input id="taskInput" placeholder="????????? ? ???????3????" autocomplete="off"/>
+      <button type="submit">??</button>
     </form>
     <ul class="task-list" id="taskList"></ul>
     <div class="empty" id="taskEmpty" hidden>
-      <span class="e-ico">🎯</span>
-      <p id="taskEmptyText">今天还没有任务，输入上方快速添加</p>
+      <span class="e-ico">??</span>
+      <p id="taskEmptyText">????????????????</p>
     </div>
-    <button class="up-chip" id="upcomingChip" hidden>📅 近 7 天还有任务，点我去日历看看 →</button>
+    <button class="up-chip" id="upcomingChip" hidden>?? ? 7 ????????????? ?</button>
   </section>
 
-  <!-- 日历 -->
+  <!-- ?? -->
   <section class="module" id="module-calendar">
     <div class="module-head">
       <div>
-        <h2>日历</h2>
-        <p class="module-sub">点击日期展开当天任务</p>
+        <h2>??</h2>
+        <p class="module-sub">??????????</p>
       </div>
     </div>
     <div class="cal-card glass">
       <div class="cal-head">
-        <button class="cal-arrow" id="calPrev" title="上个月">‹</button>
+        <button class="cal-arrow" id="calPrev" title="???">?</button>
         <div class="cal-title">
           <h3 id="calTitle"></h3>
-          <button class="mini-btn" id="calToday">回到今天</button>
+          <button class="mini-btn" id="calToday">????</button>
         </div>
-        <button class="cal-arrow" id="calNext" title="下个月">›</button>
+        <button class="cal-arrow" id="calNext" title="???">?</button>
       </div>
-      <div class="cal-week"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div>
+      <div class="cal-week"><span>?</span><span>?</span><span>?</span><span>?</span><span>?</span><span>?</span><span>?</span></div>
       <div class="cal-grid" id="calGrid"></div>
     </div>
     <div class="cal-detail glass" id="calDetail">
@@ -572,128 +573,128 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
           <span class="cal-detail-count" id="calDetailCount"></span>
         </div>
         <form class="task-add mini glass" id="calAddForm">
-          <span class="add-ico">＋</span>
-          <input id="calAddInput" placeholder="给这一天添加任务" autocomplete="off"/>
-          <button type="submit">添加</button>
+          <span class="add-ico">?</span>
+          <input id="calAddInput" placeholder="????????" autocomplete="off"/>
+          <button type="submit">??</button>
         </form>
         <ul class="task-list" id="calTaskList"></ul>
-        <div class="empty small" id="calEmpty"><span class="e-ico">📆</span><p>这一天还没有任务</p></div>
+        <div class="empty small" id="calEmpty"><span class="e-ico">??</span><p>????????</p></div>
       </div>
     </div>
   </section>
 
-  <!-- 记账本 -->
+  <!-- ??? -->
   <section class="module" id="module-money">
     <div class="module-head">
       <div>
-        <h2>记账本</h2>
-        <p class="module-sub" id="moneySub">记录每一笔，心中有数</p>
+        <h2>???</h2>
+        <p class="module-sub" id="moneySub">??????????</p>
       </div>
       <div class="module-actions">
-        <button class="import-entry ghost" id="exportRecsBtn" title="导出当前筛选的记录为 CSV">⇩ 导出</button>
-        <button class="import-entry" id="openImportBtn">⬆ 导入账单</button>
+        <button class="import-entry ghost" id="exportRecsBtn" title="?????????? CSV">? ??</button>
+        <button class="import-entry" id="openImportBtn">? ????</button>
       </div>
     </div>
     <div class="month-bar glass">
-      <button class="month-nav" id="moneyMonthPrev" title="上个月">‹</button>
-      <span class="month-label" id="moneyMonthLabel">本月</span>
-      <button class="month-nav" id="moneyMonthNext" title="下个月">›</button>
-      <button class="month-today" id="moneyMonthToday">本月</button>
+      <button class="month-nav" id="moneyMonthPrev" title="???">?</button>
+      <span class="month-label" id="moneyMonthLabel">??</span>
+      <button class="month-nav" id="moneyMonthNext" title="???">?</button>
+      <button class="month-today" id="moneyMonthToday">??</button>
       <span class="month-vs" id="monthVs"></span>
     </div>
     <div class="stat-row">
-      <div class="stat-card glass in"><span>本月收入</span><b id="statIn">¥0.00</b></div>
-      <div class="stat-card glass out"><span>本月支出</span><b id="statOut">¥0.00</b></div>
-      <div class="stat-card glass bal"><span>结余</span><b id="statBal">¥0.00</b></div>
+      <div class="stat-card glass in"><span>????</span><b id="statIn">?0.00</b></div>
+      <div class="stat-card glass out"><span>????</span><b id="statOut">?0.00</b></div>
+      <div class="stat-card glass bal"><span>??</span><b id="statBal">?0.00</b></div>
     </div>
     <div class="budget-card glass">
       <div class="budget-top">
-        <span class="budget-label" id="budgetLabel">🎯 本月支出预算</span>
-        <button type="button" class="budget-edit" id="budgetEditBtn">✎ 设置</button>
+        <span class="budget-label" id="budgetLabel">?? ??????</span>
+        <button type="button" class="budget-edit" id="budgetEditBtn">? ??</button>
       </div>
-      <div class="budget-body" id="budgetBody">还没有设置预算</div>
+      <div class="budget-body" id="budgetBody">???????</div>
       <div class="budget-bar"><i id="budgetBar"></i></div>
-      <div class="budget-meta" id="budgetMeta">设置一个每月支出上限，帮你控制开销</div>
+      <div class="budget-meta" id="budgetMeta">?????????????????</div>
     </div>
     <form class="money-form glass" id="moneyForm">
       <div class="mf-row">
         <div class="amt-box">
-          <span class="amt-sym">¥</span>
+          <span class="amt-sym">?</span>
           <input id="recAmount" type="number" step="0.01" min="0" placeholder="0.00" inputmode="decimal"/>
         </div>
         <div class="type-switch" id="typeSwitch" data-type="out">
-          <span class="ts-out on">支出</span>
-          <span class="ts-in">收入</span>
+          <span class="ts-out on">??</span>
+          <span class="ts-in">??</span>
           <i class="ts-thumb"></i>
         </div>
       </div>
       <div class="cats" id="catGrid"></div>
       <div class="mf-row2">
-        <input id="recDate" type="date" title="记账日期（默认今天）"/>
-        <select id="recPay" title="支付方式">
-          <option value="">支付方式</option>
-          <option>微信</option>
-          <option>支付宝</option>
-          <option>现金</option>
-          <option>银行卡</option>
-          <option>信用卡</option>
-          <option>其他</option>
+        <input id="recDate" type="date" title="??????????"/>
+        <select id="recPay" title="????">
+          <option value="">????</option>
+          <option>??</option>
+          <option>???</option>
+          <option>??</option>
+          <option>???</option>
+          <option>???</option>
+          <option>??</option>
         </select>
-        <input id="recNote" placeholder="备注（可选）" autocomplete="off"/>
-        <button class="btn-primary" type="submit">记一笔</button>
+        <input id="recNote" placeholder="??????" autocomplete="off"/>
+        <button class="btn-primary" type="submit">???</button>
       </div>
     </form>
     <div class="chart-card glass">
       <div class="chart-head">
-        <h4>收支图表</h4>
+        <h4>????</h4>
         <div class="seg chart-tabs" id="chartTabs">
-          <button data-mode="day" class="on">近7天</button>
-          <button data-mode="month">近6月</button>
+          <button data-mode="day" class="on">?7?</button>
+          <button data-mode="month">?6?</button>
         </div>
-        <div class="chart-legend"><span class="lg-in">收入</span><span class="lg-out">支出</span></div>
+        <div class="chart-legend"><span class="lg-in">??</span><span class="lg-out">??</span></div>
       </div>
       <div class="chart" id="moneyChart"></div>
     </div>
     <div class="donut-card glass">
       <div class="chart-head">
-        <h4>本月支出分布</h4>
+        <h4>??????</h4>
       </div>
       <div class="donut-wrap">
         <div class="donut-box">
           <div class="donut" id="catDonut"></div>
-          <div class="donut-center"><b id="donutTotal">¥0.00</b><span>本月支出</span></div>
+          <div class="donut-center"><b id="donutTotal">?0.00</b><span>????</span></div>
         </div>
         <ul class="donut-legend" id="donutLegend"></ul>
       </div>
     </div>
     <div class="recs-card glass">
       <div class="recs-head">
-        <h4>最近记录</h4>
+        <h4>????</h4>
         <span class="rec-count" id="recCount"></span>
       </div>
       <div class="rec-filters" id="recFilters">
         <div class="seg rec-type-seg" id="recTypeFilter">
-          <button data-f="all" class="on">全部</button>
-          <button data-f="out">支出</button>
-          <button data-f="in">收入</button>
+          <button data-f="all" class="on">??</button>
+          <button data-f="out">??</button>
+          <button data-f="in">??</button>
         </div>
-        <input id="recSearch" placeholder="🔍 搜索备注 / 商户" autocomplete="off"/>
-        <select id="recFCat"><option value="">全部分类</option></select>
-        <select id="recFPay"><option value="">全部方式</option></select>
-        <select id="recFMonth"><option value="">全部月份</option></select>
+        <input id="recSearch" placeholder="?? ???? / ??" autocomplete="off"/>
+        <select id="recFCat"><option value="">????</option></select>
+        <select id="recFPay"><option value="">????</option></select>
+        <select id="recFMonth"><option value="">????</option></select>
       </div>
       <ul class="rec-list" id="recList"></ul>
-      <button class="load-more" id="recLoadMore" hidden>加载更多</button>
-      <div class="empty small" id="recEmpty" hidden><span class="e-ico">🧾</span><p>还没有账单记录，先记一笔吧</p></div>
+      <button class="load-more" id="recLoadMore" hidden>????</button>
+      <div class="empty small" id="recEmpty" hidden><span class="e-ico">??</span><p>?????????????</p></div>
     </div>
   </section>
 
-  <!-- 专注番茄 -->
+  <!-- ???? -->
   <section class="module" id="module-focus">
     <div class="module-head">
       <div>
-        <h2>专注番茄</h2>
-        <p class="module-sub">25 分钟，只做一件事</p>
+        <h2>????</h2>
+        <p class="module-sub">25 ????????</p>
       </div>
     </div>
     <div class="focus-card glass">
@@ -709,9 +710,9 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
           <circle class="fr-bar" id="focusBar" cx="130" cy="130" r="112"/>
         </svg>
         <div class="focus-center">
-          <div class="focus-state" id="focusState">准备就绪</div>
+          <div class="focus-state" id="focusState">????</div>
           <div class="focus-time" id="focusTime">25:00</div>
-          <div class="focus-sub" id="focusSub">点击开始，专注一轮</div>
+          <div class="focus-sub" id="focusSub">?????????</div>
         </div>
       </div>
       <div class="focus-presets" id="focusPresets">
@@ -721,57 +722,57 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
         <button data-d="60">60</button>
       </div>
       <div class="focus-btns">
-        <button class="focus-main" id="focusBtn">▶ 开始</button>
-        <button class="focus-reset" id="focusReset">重置</button>
+        <button class="focus-main" id="focusBtn">? ??</button>
+        <button class="focus-reset" id="focusReset">??</button>
       </div>
     </div>
     <div class="focus-stats glass">
-      <div class="fs-item"><b id="statTodayCount">0</b><span>今日次数</span></div>
-      <div class="fs-item"><b id="statTodayMin">0 分钟</b><span>今日时长</span></div>
-      <div class="fs-item"><b id="statAllCount">0</b><span>累计次数</span></div>
-      <div class="fs-item"><b id="statAllMin">0 分钟</b><span>累计时长</span></div>
+      <div class="fs-item"><b id="statTodayCount">0</b><span>????</span></div>
+      <div class="fs-item"><b id="statTodayMin">0 ??</b><span>????</span></div>
+      <div class="fs-item"><b id="statAllCount">0</b><span>????</span></div>
+      <div class="fs-item"><b id="statAllMin">0 ??</b><span>????</span></div>
     </div>
   </section>
 
-  <!-- 导入 -->
+  <!-- ?? -->
   <section class="module" id="module-import">
     <div class="module-head">
       <div>
-        <h2>导入账单</h2>
-        <p class="module-sub">支持微信 / 支付宝 / 建行 / 中信 CSV / XLSX 账单，自动识别与去重</p>
+        <h2>????</h2>
+        <p class="module-sub">???? / ??? / ?? / ?? CSV / XLSX ??????????</p>
       </div>
     </div>
     <div class="import-panel-root" id="importPanelModule"></div>
   </section>
 </main>
 
-<!-- 导入弹窗（记账页入口） -->
+<!-- ??????????? -->
 <div class="overlay" id="importModal" hidden>
   <div class="modal-box glass">
     <div class="modal-title">
-      <h3>⬆ 导入账单</h3>
-      <button class="modal-close" id="modalClose" title="关闭">×</button>
+      <h3>? ????</h3>
+      <button class="modal-close" id="modalClose" title="??">?</button>
     </div>
     <div class="import-panel-root" id="importPanelModal"></div>
   </div>
 </div>
 
-<!-- 记录编辑弹窗 -->
+<!-- ?????? -->
 <div class="overlay" id="recModal" hidden>
   <div class="modal-box glass rec-modal">
     <div class="modal-title">
-      <h3>编辑记录</h3>
-      <button class="modal-close" id="recModalClose" title="关闭">×</button>
+      <h3>????</h3>
+      <button class="modal-close" id="recModalClose" title="??">?</button>
     </div>
     <form class="rec-modal-form" id="recModalForm">
       <div class="mf-row">
         <div class="amt-box">
-          <span class="amt-sym">¥</span>
+          <span class="amt-sym">?</span>
           <input id="rmAmount" type="number" step="0.01" min="0" placeholder="0.00" inputmode="decimal"/>
         </div>
         <div class="type-switch" id="rmTypeSwitch" data-type="out">
-          <span class="ts-out on">支出</span>
-          <span class="ts-in">收入</span>
+          <span class="ts-out on">??</span>
+          <span class="ts-in">??</span>
           <i class="ts-thumb"></i>
         </div>
       </div>
@@ -779,75 +780,78 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
       <div class="mf-row2">
         <input id="rmDate" type="date"/>
         <select id="rmPay">
-          <option value="">支付方式</option>
-          <option>微信</option>
-          <option>支付宝</option>
-          <option>现金</option>
-          <option>银行卡</option>
-          <option>信用卡</option>
-          <option>其他</option>
+          <option value="">????</option>
+          <option>??</option>
+          <option>???</option>
+          <option>??</option>
+          <option>???</option>
+          <option>???</option>
+          <option>??</option>
         </select>
       </div>
-      <input id="rmNote" class="rm-note" placeholder="备注（可选）" autocomplete="off"/>
+      <input id="rmNote" class="rm-note" placeholder="??????" autocomplete="off"/>
       <div class="rm-actions">
-        <button type="button" class="btn-ghost rm-del" id="rmDelete">删除</button>
-        <button type="submit" class="btn-primary">保存</button>
+        <button type="button" class="btn-ghost rm-del" id="rmDelete">??</button>
+        <button type="submit" class="btn-primary">??</button>
       </div>
     </form>
   </div>
 </div>
 
-<!-- 优先级菜单 -->
+<!-- ????? -->
 <div class="pri-popup" id="priPopup" hidden>
-  <b>设置优先级</b>
-  <button data-p="2">🔴 高</button>
-  <button data-p="1">🟠 中</button>
-  <button data-p="0">🔵 低</button>
-  <button data-p="-1">清除</button>
+  <b>?????</b>
+  <button data-p="2">?? ?</button>
+  <button data-p="1">?? ?</button>
+  <button data-p="0">?? ?</button>
+  <button data-p="-1">??</button>
 </div>
 
-<!-- 数据备份弹层 -->
+<!-- ?????? -->
 <div class="backup-pop" id="backupPop" hidden>
-  <b>💾 数据备份</b>
-  <p>备份内容：任务、账单、番茄记录、设置</p>
-  <button type="button" id="exportBtn">⬇ 导出备份文件</button>
-  <button type="button" id="importBtn">⬆ 从备份文件恢复</button>
+  <b>?? ????</b>
+  <p>??????????????????</p>
+  <button type="button" id="exportBtn">? ??????</button>
+  <button type="button" id="importBtn">? ???????</button>
   <input type="file" id="backupFile" accept=".json,application/json" hidden>
-  <small>恢复会覆盖当前数据，请谨慎操作</small>
+  <small>???????????????</small>
 </div>
 
-<!-- AI 理财助手 -->
-<button class="ai-fab" id="aiFab" title="AI 理财助手">✦</button>
+<!-- AI ???? -->
+<button class="ai-fab" id="aiFab" title="AI ????">?</button>
 <div class="ai-panel glass" id="aiPanel" hidden>
   <div class="ai-head">
     <div class="ai-title">
-      <b>✦ AI 理财助手</b>
-      <span>只读分析微信 / 支付宝账单，帮你归纳和建议</span>
+      <b>? AI ????</b>
+      <span>????????? ? ?? ? ?? ? ??</span>
     </div>
-    <button class="ai-close" id="aiClose" title="关闭">×</button>
+    <button class="ai-close" id="aiClose" title="??">?</button>
   </div>
   <div class="ai-quick" id="aiQuick">
-    <button type="button" data-q="sum">本月总结</button>
-    <button type="button" data-q="cat">分类分析</button>
-    <button type="button" data-q="save">省钱建议</button>
-    <button type="button" data-q="trend">收支趋势</button>
+    <button type="button" data-q="today">????</button>
+    <button type="button" data-q="sum">????</button>
+    <button type="button" data-q="cat">????</button>
+    <button type="button" data-q="save">????</button>
+    <button type="button" data-q="trend">????</button>
+    <button type="button" data-q="task">????</button>
+    <button type="button" data-q="focus">????</button>
   </div>
   <div class="ai-chat" id="aiChat"></div>
   <form class="ai-input" id="aiForm">
-    <input id="aiInput" placeholder="问你的账单，如：我这个月哪里花钱最多？" autocomplete="off"/>
-    <button type="submit">发送</button>
+    <input id="aiInput" placeholder="????????????????????????" autocomplete="off"/>
+    <button type="submit">??</button>
   </form>
   <div class="ai-settings">
-    <button type="button" class="ai-settings-toggle" id="aiSettingsBtn">⚙ 接口设置</button>
+    <button type="button" class="ai-settings-toggle" id="aiSettingsBtn">? ????</button>
     <div class="ai-settings-body" id="aiSettingsBody" hidden>
-      <input id="aiBase" placeholder="接口地址 如 https://api.deepseek.com/v1" spellcheck="false"/>
-      <input id="aiModel" placeholder="模型名 如 deepseek-v4-flash" spellcheck="false"/>
+      <input id="aiBase" placeholder="???? ? https://api.deepseek.com/v1" spellcheck="false"/>
+      <input id="aiModel" placeholder="??? ? deepseek-v4-flash" spellcheck="false"/>
       <input id="aiKey" type="password" placeholder="API Key (sk-...)" spellcheck="false"/>
       <div class="ai-settings-row">
-        <button type="button" id="aiTest">测试连接</button>
+        <button type="button" id="aiTest">????</button>
         <span class="ai-test-result" id="aiTestResult"></span>
       </div>
-      <small>发送给 AI 的只有汇总统计，不包含账单明细；设置保存在本地浏览器。</small>
+      <small>?????????????????????????????????? AI??? API Key??????????</small>
     </div>
   </div>
 </div>
@@ -857,14 +861,14 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
 <script>
 'use strict';
 
-/* ================= 工具函数 ================= */
+/* ================= ???? ================= */
 const $ = (s, r) => (r || document).querySelector(s);
 const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
 const pad = n => String(n).padStart(2, '0');
 const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
-const WEEK = ['日', '一', '二', '三', '四', '五', '六'];
+const WEEK = ['?', '?', '?', '?', '?', '?', '?'];
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const shorten = (s, n) => { s = String(s || ''); return s.length > n ? s.slice(0, n) + '…' : s; };
+const shorten = (s, n) => { s = String(s || ''); return s.length > n ? s.slice(0, n) + '?' : s; };
 const fmtMoney = n => (Math.round(n * 100) / 100).toLocaleString('zh-CN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 const todayStr = (d) => {
   d = d || new Date();
@@ -876,7 +880,7 @@ const parseDateStr = ds => {
 };
 const formatDateCN = ds => {
   const d = parseDateStr(ds);
-  return (d.getMonth() + 1) + '月' + d.getDate() + '日 周' + WEEK[d.getDay()];
+  return (d.getMonth() + 1) + '?' + d.getDate() + '? ?' + WEEK[d.getDay()];
 };
 function showToast(msg, type, actions) {
   const el = document.createElement('div');
@@ -903,7 +907,7 @@ function showToast(msg, type, actions) {
   }, actions && actions.length ? 5000 : 2200);
 }
 
-/* ================= 数据层（localStorage） ================= */
+/* ================= ????localStorage? ================= */
 const Store = {
   get(key, def) {
     try { const v = localStorage.getItem(key); return v == null ? def : JSON.parse(v); }
@@ -911,7 +915,7 @@ const Store = {
   },
   set(key, val) {
     try { localStorage.setItem(key, JSON.stringify(val)); }
-    catch (e) { showToast('保存失败：存储空间不足', 'err'); }
+    catch (e) { showToast('???????????', 'err'); }
   }
 };
 const DB = {
@@ -925,22 +929,22 @@ const DB = {
   saveSettings: s => Store.set('flowday_settings', s)
 };
 
-/* ================= 全局状态 ================= */
+/* ================= ???? ================= */
 const state = {
   taskFilter: 'all',
   calCursor: new Date(),
   calSelected: null,
   recType: 'out',
-  recCat: '餐饮',
+  recCat: '??',
   chartMode: 'day',
   moneyMonth: todayStr().slice(0, 7),
   recFilter: { q: '', type: 'all', cat: '', pay: '', month: todayStr().slice(0, 7), page: 1 },
   rmId: null,
   rmType: 'out',
-  rmCat: '餐饮'
+  rmCat: '??'
 };
 
-/* ================= 自然语言解析（任务） ================= */
+/* ================= ?????????? ================= */
 function parseTaskInput(raw) {
   const out = { date: todayStr(), time: null, text: String(raw || '').trim() };
   let t = String(raw || '').trim();
@@ -948,14 +952,14 @@ function parseTaskInput(raw) {
   const addDays = n => { const d = new Date(now); d.setDate(d.getDate() + n); return todayStr(d); };
 
   const dateRules = [
-    { re: /大后天/, off: 3 },
-    { re: /后天/, off: 2 },
-    { re: /(?:明天|明日)/, off: 1 },
-    { re: /(?:今天|今日)/, off: 0 },
-    { re: /(\d{4})[-/年](\d{1,2})[-/月](\d{1,2})/, fn: m => m[1] + '-' + pad(+m[2]) + '-' + pad(+m[3]) },
-    { re: /(\d{1,2})月(\d{1,2})[日号]/, fn: m => todayStr(new Date(now.getFullYear(), +m[1] - 1, +m[2])) },
-    { re: /(?:下?[周星期])([一二三四五六日天])/, fn: m => {
-        const map = { 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6, 日: 7, 天: 7 };
+    { re: /???/, off: 3 },
+    { re: /??/, off: 2 },
+    { re: /(?:??|??)/, off: 1 },
+    { re: /(?:??|??)/, off: 0 },
+    { re: /(\d{4})[-/?](\d{1,2})[-/?](\d{1,2})/, fn: m => m[1] + '-' + pad(+m[2]) + '-' + pad(+m[3]) },
+    { re: /(\d{1,2})?(\d{1,2})[??]/, fn: m => todayStr(new Date(now.getFullYear(), +m[1] - 1, +m[2])) },
+    { re: /(?:??[???])([????????])/, fn: m => {
+        const map = { ?: 1, ?: 2, ?: 3, ?: 4, ?: 5, ?: 6, ?: 7, ?: 7 };
         let diff = (map[m[1]] - now.getDay() + 7) % 7;
         if (diff === 0) diff = 7;
         const d = new Date(now); d.setDate(d.getDate() + diff);
@@ -968,28 +972,28 @@ function parseTaskInput(raw) {
     if (m) { out.date = r.fn ? r.fn(m) : addDays(r.off); t = t.replace(m[0], ' '); break; }
   }
 
-  const timeM = t.match(/(凌晨|早上|早晨|上午|中午|下午|傍晚|晚上|夜里)?\s*(\d{1,2})\s*[:：点]\s*(\d{1,2})?\s*(分|半)?/);
+  const timeM = t.match(/(??|??|??|??|??|??|??|??|??)?\s*(\d{1,2})\s*[:??]\s*(\d{1,2})?\s*(?|?)?/);
   if (timeM) {
     let h = +timeM[2];
     let min = 0;
-    if (timeM[4] === '半') min = 30;
+    if (timeM[4] === '?') min = 30;
     else if (timeM[3] != null) min = +timeM[3];
     const prefix = timeM[1] || '';
-    if ((prefix === '下午' || prefix === '晚上' || prefix === '傍晚') && h < 12) h += 12;
-    else if (prefix === '中午' && h < 10) h += 12;
-    else if (prefix === '凌晨' && h === 12) h = 0;
+    if ((prefix === '??' || prefix === '??' || prefix === '??') && h < 12) h += 12;
+    else if (prefix === '??' && h < 10) h += 12;
+    else if (prefix === '??' && h === 12) h = 0;
     if (h <= 23 && min <= 59) {
       out.time = pad(h) + ':' + pad(min);
       t = t.replace(timeM[0], ' ');
     }
   }
 
-  out.text = t.replace(/\s+/g, ' ').replace(/^(去|在|和|给|与|要|，|,|。|、)+/, '').trim();
+  out.text = t.replace(/\s+/g, ' ').replace(/^(?|?|?|?|?|?|?|,|?|?)+/, '').trim();
   if (!out.text) out.text = String(raw || '').trim();
   return out;
 }
 
-/* ================= CSV 解析 ================= */
+/* ================= CSV ?? ================= */
 function parseCSV(text) {
   const rows = [];
   let row = [], field = '', q = false;
@@ -1024,52 +1028,52 @@ function decodeText(buf) {
 
 function parseAmount(v) {
   if (v == null) return null;
-  const s = String(v).replace(/[¥￥元,\s]/g, '').trim();
+  const s = String(v).replace(/[???,\s]/g, '').trim();
   if (!s) return null;
   const n = Math.abs(parseFloat(s));
   return isFinite(n) ? Math.round(n * 100) / 100 : null;
 }
 
-/* 自动分类：关键词匹配，优先级从高到低 */
+/* ?????????????????? */
 function autoCat(note, type) {
   const n = String(note || '');
   const rules = [
-    { cat: '餐饮', kws: ['餐饮', '美食', '外卖', '餐厅', '奶茶', '咖啡', '超市', '水果', '便利店', '饿了么', '美团', '小吃', '早餐', '午餐', '晚餐', '甜品', '快餐', '食堂', '便当', '烧烤', '火锅', '蛋糕', '面包', '果汁'] },
-    { cat: '交通', kws: ['交通', '地铁', '公交', '滴滴', '打车', '加油', '停车', '铁路', '航空', '高铁', '火车', '机票', '出租', '12306', '顺风车', '骑行'] },
-    { cat: '购物', kws: ['购物', '淘宝', '京东', '拼多多', '天猫', '唯品会', '商场', '服饰', '商店', '优衣库', '抖音电商'] },
-    { cat: '娱乐', kws: ['娱乐', '视频', '音乐', '游戏', '电影', '演出', '会员', '腾讯视频', '爱奇艺', '网易云', 'steam', 'bilibili', '哔哩', '王者', '原神', '点券', '天游', '英雄联盟'] },
-    { cat: '住房', kws: ['房租', '水电', '物业', '宽带', '燃气', '装修', '住房', '租金', '电费', '水费'] },
-    { cat: '医疗', kws: ['医院', '医疗', '诊所', '体检', '挂号', '药房', '药品', '买药', '牙科', '医药', '门诊'] },
-    { cat: '教育', kws: ['教育', '培训', '学费', '课程', '书店', '考试', '学习', '网课', '辅导', '书城'] },
-    { cat: '旅行', kws: ['旅行', '旅游', '酒店', '民宿', '携程', '去哪儿', '门票', '景区', '度假'] },
-    { cat: '日用', kws: ['日用', '百货', '家居', '文具', '清洁', '纸巾', '洗护', '化妆品', '生活用品'] }
+    { cat: '??', kws: ['??', '??', '??', '??', '??', '??', '??', '??', '???', '???', '??', '??', '??', '??', '??', '??', '??', '??', '??', '??', '??', '??', '??', '??'] },
+    { cat: '??', kws: ['??', '??', '??', '??', '??', '??', '??', '??', '??', '??', '??', '??', '??', '12306', '???', '??'] },
+    { cat: '??', kws: ['??', '??', '??', '???', '??', '???', '??', '??', '??', '???', '????'] },
+    { cat: '??', kws: ['??', '??', '??', '??', '??', '??', '??', '????', '???', '???', 'steam', 'bilibili', '??', '??', '??', '??', '??', '????'] },
+    { cat: '??', kws: ['??', '??', '??', '??', '??', '??', '??', '??', '??', '??'] },
+    { cat: '??', kws: ['??', '??', '??', '??', '??', '??', '??', '??', '??', '??', '??'] },
+    { cat: '??', kws: ['??', '??', '??', '??', '??', '??', '??', '??', '??', '??'] },
+    { cat: '??', kws: ['??', '??', '??', '??', '??', '???', '??', '??', '??'] },
+    { cat: '??', kws: ['??', '??', '??', '??', '??', '??', '??', '???', '????'] }
   ];
   for (const r of rules) {
     if (r.kws.some(k => n.includes(k))) return r.cat;
   }
-  if (type === 'in' && /工资|薪资|奖金|报销|转账|代发|收入/.test(n)) return '工资';
-  return '其他';
+  if (type === 'in' && /??|??|??|??|??|??|??/.test(n)) return '??';
+  return '??';
 }
 
-/* 解析支付宝 / 微信账单（统一的行数组入口：CSV / XLSX 都转成行） */
+/* ????? / ??????????????CSV / XLSX ????? */
 function parseBillRows(rows, name) {
   let headerIdx = -1, fmt = null;
   for (let i = 0; i < Math.min(60, rows.length); i++) {
     const joined = rows[i].map(c => String(c).trim()).join('|');
-    if (joined.includes('交易时间') && joined.includes('金额') && joined.includes('收/支')) {
+    if (joined.includes('????') && joined.includes('??') && joined.includes('?/?')) {
       headerIdx = i;
-      fmt = joined.includes('交易类型') ? 'wechat'
-          : joined.includes('交易分类') ? 'alipay'
-          : joined.includes('金额(元)') ? 'wechat' : 'alipay';
+      fmt = joined.includes('????') ? 'wechat'
+          : joined.includes('????') ? 'alipay'
+          : joined.includes('??(?)') ? 'wechat' : 'alipay';
       break;
     }
   }
   if (headerIdx < 0) {
-    /* 银行流水格式：交易日期 + 收入/支出/发生额/借贷 等列（建设银行 / 中信银行等） */
+    /* ??????????? + ??/??/???/?? ??????? / ?????? */
     for (let i = 0; i < Math.min(60, rows.length); i++) {
       const joined = rows[i].map(c => String(c).trim()).join('|');
-      if ((joined.includes('交易日期') || joined.includes('记账日期') || joined.includes('交易时间'))
-          && (joined.includes('收入') || joined.includes('支出') || joined.includes('发生额') || joined.includes('借方') || joined.includes('贷方'))) {
+      if ((joined.includes('????') || joined.includes('????') || joined.includes('????'))
+          && (joined.includes('??') || joined.includes('??') || joined.includes('???') || joined.includes('??') || joined.includes('??'))) {
         headerIdx = i;
         fmt = 'bank';
         break;
@@ -1081,16 +1085,16 @@ function parseBillRows(rows, name) {
 
   const header = rows[headerIdx].map(c => String(c).trim());
   const idx = key => header.findIndex(c => c === key);
-  const timeCol = idx('交易时间');
-  const typeCol = idx('收/支');
-  const amtCol = header.findIndex(c => /^金额/.test(c));
-  const peerCol = idx('交易对方');
-  const itemCol = Math.max(idx('商品说明'), idx('商品'));
-  const catCol = idx('交易分类');
-  let idCol = idx('交易订单号');
-  if (idCol < 0) idCol = idx('交易单号');
-  if (idCol < 0) idCol = idx('商家订单号');
-  if (idCol < 0) idCol = idx('商户单号');
+  const timeCol = idx('????');
+  const typeCol = idx('?/?');
+  const amtCol = header.findIndex(c => /^??/.test(c));
+  const peerCol = idx('????');
+  const itemCol = Math.max(idx('????'), idx('??'));
+  const catCol = idx('????');
+  let idCol = idx('?????');
+  if (idCol < 0) idCol = idx('????');
+  if (idCol < 0) idCol = idx('?????');
+  if (idCol < 0) idCol = idx('????');
 
   const out = [], seen = new Set();
   let errors = 0;
@@ -1099,12 +1103,12 @@ function parseBillRows(rows, name) {
     if (!r.length || r.every(c => !c)) continue;
     const joined = r.join(',');
     if (joined.startsWith('---') || joined.startsWith('===')
-        || joined.includes('导出记录') || joined.includes('总计')
-        || joined.includes('当前共') || joined.includes('起始时间') || joined.includes('结束时间')) continue;
+        || joined.includes('????') || joined.includes('??')
+        || joined.includes('???') || joined.includes('????') || joined.includes('????')) continue;
 
     const typeRaw = r[typeCol] || '';
     const amount = parseAmount(r[amtCol] != null ? r[amtCol] : '');
-    const type = typeRaw.includes('收入') ? 'in' : typeRaw.includes('支出') ? 'out' : null;
+    const type = typeRaw.includes('??') ? 'in' : typeRaw.includes('??') ? 'out' : null;
     if (amount == null || !type) { errors++; continue; }
 
     const timeRaw = r[timeCol] != null ? String(r[timeCol]).trim() : '';
@@ -1119,8 +1123,8 @@ function parseBillRows(rows, name) {
 
     const peer = r[peerCol] != null ? r[peerCol] : '';
     const item = r[itemCol] != null ? r[itemCol] : '';
-    const note = [peer, item].filter(Boolean).join(' · ') || '账单';
-    const catText = catCol >= 0 && r[catCol] ? note + ' · ' + r[catCol] : note;
+    const note = [peer, item].filter(Boolean).join(' ? ') || '??';
+    const catText = catCol >= 0 && r[catCol] ? note + ' ? ' + r[catCol] : note;
     const uniqueRaw = (r[idCol] != null ? r[idCol] : '').replace(/\s+/g, '');
     const uniqueId = uniqueRaw ? fmt + ':' + uniqueRaw : null;
     if (uniqueId && seen.has(uniqueId)) continue;
@@ -1131,11 +1135,11 @@ function parseBillRows(rows, name) {
   return { rows: out, errors, headerFound: true, name };
 }
 
-/* ===== 银行流水解析（建设银行 / 中信银行等） ===== */
+/* ===== ??????????? / ?????? ===== */
 function bankSourceFromName(name) {
   const n = String(name || '').toLowerCase();
-  if (n.includes('建设') || n.includes('建行') || n.includes('ccb')) return 'ccb';
-  if (n.includes('中信') || n.includes('citic')) return 'citic';
+  if (n.includes('??') || n.includes('??') || n.includes('ccb')) return 'ccb';
+  if (n.includes('??') || n.includes('citic')) return 'citic';
   return 'bank';
 }
 function normalizeBankDate(raw) {
@@ -1143,7 +1147,7 @@ function normalizeBankDate(raw) {
   let s = String(raw).trim();
   if (!s) return null;
   if (/^-?\d+(\.\d+)?$/.test(s) && +s > 20000 && +s < 100000) return excelSerialToDateStr(parseFloat(s));
-  let m = s.match(/(\d{4})[-/年.](\d{1,2})[-/月.](\d{1,2})/);
+  let m = s.match(/(\d{4})[-/?.](\d{1,2})[-/?.](\d{1,2})/);
   if (m) return m[1] + '-' + pad(+m[2]) + '-' + pad(+m[3]);
   m = s.match(/^(\d{8})/);
   if (m) return m[1].slice(0, 4) + '-' + m[1].slice(4, 6) + '-' + m[1].slice(6, 8);
@@ -1155,14 +1159,14 @@ function parseBankRows(rows, headerIdx, name) {
   const header = rows[headerIdx].map(c => String(c).trim());
   const idx = key => header.findIndex(c => c === key);
   const findLike = keys => { for (const k of keys) { const i = idx(k); if (i >= 0) return i; } return -1; };
-  const dateCol = findLike(['交易日期', '记账日期', '交易时间', '日期', '入账日期', '交易日']);
-  const noteCol = findLike(['摘要', '交易摘要', '用途', '附言', '备注', '交易说明', '商品说明', '商品']);
-  const peerCol = findLike(['对方户名', '交易对方', '对方名称', '对方姓名', '收款人', '付款人', '对方账号', '收款方', '付款方']);
-  const incCol = findLike(['收入金额', '贷方发生额', '贷方金额', '存入金额', '入账金额', '收入(元)', '收入']);
-  const expCol = findLike(['支出金额', '借方发生额', '借方金额', '支取金额', '出账金额', '支出(元)', '支出']);
-  const amtCol = findLike(['发生额', '交易金额', '金额(元)', '金额', '交易额']);
-  const dirCol = findLike(['借贷标志', '借贷方向', '借贷', '收付标志', '收付']);
-  const idCol = findLike(['交易流水号', '流水号', '交易序号', '凭证号', '业务参考号', '交易参考号', '序号']);
+  const dateCol = findLike(['????', '????', '????', '??', '????', '???']);
+  const noteCol = findLike(['??', '????', '??', '??', '??', '????', '????', '??']);
+  const peerCol = findLike(['????', '????', '????', '????', '???', '???', '????', '???', '???']);
+  const incCol = findLike(['????', '?????', '????', '????', '????', '??(?)', '??']);
+  const expCol = findLike(['????', '?????', '????', '????', '????', '??(?)', '??']);
+  const amtCol = findLike(['???', '????', '??(?)', '??', '???']);
+  const dirCol = findLike(['????', '????', '??', '????', '??']);
+  const idCol = findLike(['?????', '???', '????', '???', '?????', '?????', '??']);
   const source = bankSourceFromName(name);
   const out = [], seen = new Set();
   let errors = 0;
@@ -1170,7 +1174,7 @@ function parseBankRows(rows, headerIdx, name) {
     const r = rows[i].map(c => String(c).trim());
     if (!r.length || r.every(c => !c)) continue;
     const joined = r.join(',');
-    if (joined.startsWith('---') || joined.startsWith('===') || joined.includes('合计') || joined.includes('总计')) continue;
+    if (joined.startsWith('---') || joined.startsWith('===') || joined.includes('??') || joined.includes('??')) continue;
     const date = normalizeBankDate(r[dateCol]);
     if (!date) { errors++; continue; }
     let amount = null, type = null;
@@ -1184,15 +1188,15 @@ function parseBankRows(rows, headerIdx, name) {
       const amt = parseAmount(rawAmt);
       const dirRaw = dirCol >= 0 ? String(r[dirCol] || '') : '';
       if (amt != null && amt > 0) {
-        if (/借|支|出|付/.test(dirRaw)) type = 'out';
-        else if (/贷|收|入/.test(dirRaw)) type = 'in';
-        else if (/^[-－（(]/.test(rawAmt.replace(/[¥￥元,\s]/g, ''))) type = 'out';
+        if (/?|?|?|?/.test(dirRaw)) type = 'out';
+        else if (/?|?|?/.test(dirRaw)) type = 'in';
+        else if (/^[-??(]/.test(rawAmt.replace(/[???,\s]/g, ''))) type = 'out';
         else type = 'in';
         amount = amt;
       }
     }
     if (amount == null || !type) { errors++; continue; }
-    const note = [r[peerCol] != null ? r[peerCol] : '', r[noteCol] != null ? r[noteCol] : ''].filter(Boolean).join(' · ') || '银行流水';
+    const note = [r[peerCol] != null ? r[peerCol] : '', r[noteCol] != null ? r[noteCol] : ''].filter(Boolean).join(' ? ') || '????';
     const uniqueRaw = idCol >= 0 ? String(r[idCol] || '').replace(/\s+/g, '') : '';
     const uniqueId = uniqueRaw ? 'bank:' + uniqueRaw : null;
     if (uniqueId && seen.has(uniqueId)) continue;
@@ -1206,7 +1210,7 @@ function parseBillCSV(text, name) {
   return parseBillRows(parseCSV(text), name);
 }
 
-/* ===== XLSX 解析（.xlsx 是 zip 包，内含 sheet XML + 共享字符串） ===== */
+/* ===== XLSX ???.xlsx ? zip ???? sheet XML + ?????? ===== */
 function parseZIP(buf) {
   const dv = new DataView(buf);
   const u8 = new Uint8Array(buf);
@@ -1248,12 +1252,12 @@ async function readZipEntry(buf, entry) {
   const compressed = u8.slice(start, start + entry.compSize);
   if (entry.method === 0) return new TextDecoder('utf-8').decode(compressed);
   if (entry.method === 8) {
-    if (typeof DecompressionStream === 'undefined') throw new Error('当前浏览器不支持 xlsx 解析');
+    if (typeof DecompressionStream === 'undefined') throw new Error('???????? xlsx ??');
     const stream = new Blob([compressed]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
     const arr = await new Response(stream).arrayBuffer();
     return new TextDecoder('utf-8').decode(arr);
   }
-  throw new Error('不支持的压缩方式');
+  throw new Error('????????');
 }
 
 const colIndex = ref => { let n = 0; for (const ch of ref) n = n * 26 + (ch.charCodeAt(0) - 64); return n - 1; };
@@ -1314,7 +1318,7 @@ function parseSheetXml(xml, sharedStrings) {
   }
   return rows;
 }
-/* Excel 日期序列号 -> YYYY-MM-DD（按“墙上时间”理解，避免时区偏移） */
+/* Excel ????? -> YYYY-MM-DD?????????????????? */
 function excelSerialToDateStr(serial) {
   const ms = Math.round((serial - 25569) * 86400000);
   const d = new Date(ms);
@@ -1330,19 +1334,19 @@ async function parseBillXLSX(buf, name) {
   }
   const sheet1 = entries.find(n => n === 'xl/worksheets/sheet1.xml')
     || entries.find(n => /^xl\/worksheets\/sheet\d+\.xml$/.test(n));
-  if (!sheet1) throw new Error('未找到工作表');
+  if (!sheet1) throw new Error('??????');
   const xml = await readZipEntry(buf, files[sheet1]);
   return parseBillRows(parseSheetXml(xml, shared), name);
 }
 
-/* ================= 导入面板（模块页 + 弹窗共用） ================= */
+/* ================= ???????? + ????? ================= */
 const importPanels = new WeakMap();
 
 function initImportPanel(root) {
   const zoneHTML =
-    '<div class="dz-ico">📄</div>' +
-    '<p>拖拽 CSV / XLSX 文件到此处<br>或点击选择文件</p>' +
-    '<small>支持微信 / 支付宝 / 建行 / 中信账单，可一次多选</small>' +
+    '<div class="dz-ico">??</div>' +
+    '<p>?? CSV / XLSX ?????<br>???????</p>' +
+    '<small>???? / ??? / ?? / ??????????</small>' +
     '<input type="file" accept=".csv,.xlsx,text/csv,text/plain,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" multiple hidden>';
 
   root.innerHTML =
@@ -1351,23 +1355,23 @@ function initImportPanel(root) {
         '<div class="import-main">' +
           '<div class="drop-zone">' + zoneHTML + '</div>' +
           '<div class="import-guide">' +
-            '<h4>📖 账单导出教程</h4>' +
-            '<div class="guide-box"><b class="aw">支付宝</b><ol>' +
-              '<li>打开支付宝 → 搜索「账单」→ 右上角「···」→ 开具交易流水证明</li>' +
-              '<li>选择时间范围，下载解压后得到 CSV 文件</li>' +
+            '<h4>?? ??????</h4>' +
+            '<div class="guide-box"><b class="aw">???</b><ol>' +
+              '<li>????? ? ??????? ????????? ????????</li>' +
+              '<li>?????????????? CSV ??</li>' +
             '</ol></div>' +
-            '<div class="guide-box"><b class="wx">微信</b><ol>' +
-              '<li>我 → 服务 → 钱包 → 账单 → 常见问题 → 下载账单</li>' +
-              '<li>选择时间范围，邮箱接收后解压得到 CSV 文件</li>' +
+            '<div class="guide-box"><b class="wx">??</b><ol>' +
+              '<li>? ? ?? ? ?? ? ?? ? ???? ? ????</li>' +
+              '<li>???????????????? CSV ??</li>' +
             '</ol></div>' +
-            '<div class="guide-box"><b class="bk">建设银行 / 中信银行</b><ol>' +
-              '<li>手机银行 → 收支明细 / 交易流水 → 右上角「导出」</li>' +
-              '<li>下载 CSV 或 Excel 文件（GBK 编码也能识别）</li>' +
+            '<div class="guide-box"><b class="bk">???? / ????</b><ol>' +
+              '<li>???? ? ???? / ???? ? ???????</li>' +
+              '<li>?? CSV ? Excel ???GBK ???????</li>' +
             '</ol></div>' +
-            '<div class="guide-tip">提示：支持 CSV / XLSX；已导入过的账单会自动去重；预览最多显示前 50 条。</div>' +
+            '<div class="guide-tip">????? CSV / XLSX????????????????????? 50 ??</div>' +
           '</div>' +
         '</div>' +
-        '<div class="import-foot"><button type="button" class="btn-ghost" data-act="close">关闭</button></div>' +
+        '<div class="import-foot"><button type="button" class="btn-ghost" data-act="close">??</button></div>' +
       '</div>' +
       '<div class="stage2" hidden></div>' +
     '</div>';
@@ -1391,9 +1395,9 @@ function initImportPanel(root) {
     const arr = Array.from(files || []);
     if (!arr.length) return;
     const supported = arr.filter(f => /\.(csv|xlsx)$/i.test(f.name));
-    if (!supported.length) { showToast('请选择 CSV 或 XLSX 文件', 'err'); return; }
+    if (!supported.length) { showToast('??? CSV ? XLSX ??', 'err'); return; }
 
-    zone.innerHTML = '<div class="dz-ico">⏳</div><p>正在解析 ' + supported.length + ' 个文件…</p><small>自动识别支付宝 / 微信格式</small>';
+    zone.innerHTML = '<div class="dz-ico">?</div><p>???? ' + supported.length + ' ????</p><small>??????? / ????</small>';
     Promise.all(supported.map(f =>
       f.arrayBuffer().then(buf =>
         /\.xlsx$/i.test(f.name) ? parseBillXLSX(buf, f.name) : parseBillCSV(decodeText(buf), f.name)
@@ -1413,8 +1417,8 @@ function initImportPanel(root) {
 
   function showPreview(rows, errors, headerFound) {
     if (!headerFound) {
-      zone.innerHTML = '<div class="dz-ico">❓</div><p>未识别为支付宝 / 微信账单格式</p><small>请确认文件是导出解压后的 CSV</small>';
-      showToast('未找到「交易时间」表头，无法解析', 'err');
+      zone.innerHTML = '<div class="dz-ico">?</div><p>??????? / ??????</p><small>???????????? CSV</small>';
+      showToast('????????????????', 'err');
       return;
     }
 
@@ -1426,8 +1430,8 @@ function initImportPanel(root) {
 
     const total = rows.length, inc = rows.filter(r => r.type === 'in').length, exp = total - inc;
     if (!total) {
-      zone.innerHTML = '<div class="dz-ico">📭</div><p>没有可导入的记录</p><small>文件中没有符合格式的数据行</small>';
-      showToast(errors ? '解析了 ' + errors + ' 条无效数据' : '没有可导入的记录', 'err');
+      zone.innerHTML = '<div class="dz-ico">??</div><p>????????</p><small>?????????????</small>';
+      showToast(errors ? '??? ' + errors + ' ?????' : '????????', 'err');
       return;
     }
 
@@ -1435,27 +1439,27 @@ function initImportPanel(root) {
     const visible = rows.slice(0, MAX);
     const importable = r => checked.has(r.id) && !(r.uniqueId && existing.has(r.uniqueId));
     stage2.innerHTML =
-      '<div class="result-summary">共识别 <b>' + total + '</b> 条，其中收入 <b class="t-in">' + inc + '</b> 条、支出 <b class="t-out">' + exp + '</b> 条' +
-      (errors ? '，跳过无法解析 <b>' + errors + '</b> 条' : '') + '</div>' +
+      '<div class="result-summary">??? <b>' + total + '</b> ?????? <b class="t-in">' + inc + '</b> ???? <b class="t-out">' + exp + '</b> ?' +
+      (errors ? '??????? <b>' + errors + '</b> ?' : '') + '</div>' +
       '<div class="result-table-wrap"><table class="res-table"><thead><tr>' +
-        '<th>时间</th><th>类型</th><th>对方 / 备注</th><th>金额</th><th>分类</th><th>导入</th>' +
+        '<th>??</th><th>??</th><th>?? / ??</th><th>??</th><th>??</th><th>??</th>' +
       '</tr></thead><tbody>' +
       visible.map(r => {
         const dup = !!(r.uniqueId && existing.has(r.uniqueId));
         return '<tr class="' + (dup ? 'dup' : '') + '" data-id="' + r.id + '">' +
           '<td>' + esc(r.date) + '</td>' +
-          '<td class="cell-amt ' + r.type + '">' + (r.type === 'in' ? '收入' : '支出') + '</td>' +
+          '<td class="cell-amt ' + r.type + '">' + (r.type === 'in' ? '??' : '??') + '</td>' +
           '<td title="' + esc(r.note) + '">' + esc(shorten(r.note, 22)) + '</td>' +
-          '<td class="cell-amt ' + r.type + '">' + (r.type === 'in' ? '+' : '−') + '¥' + fmtMoney(r.amount) + '</td>' +
+          '<td class="cell-amt ' + r.type + '">' + (r.type === 'in' ? '+' : '?') + '?' + fmtMoney(r.amount) + '</td>' +
           '<td>' + esc(r.cat) + '</td>' +
           '<td><input type="checkbox"' + (checked.has(r.id) ? ' checked' : '') + (dup ? ' data-dup="1"' : '') + '></td>' +
         '</tr>';
       }).join('') +
       '</tbody></table></div>' +
-      (total > MAX ? '<div class="result-more">还有 ' + (total - MAX) + ' 条未显示，导入时会一并处理</div>' : '') +
+      (total > MAX ? '<div class="result-more">?? ' + (total - MAX) + ' ?????????????</div>' : '') +
       '<div class="result-actions">' +
-        '<button type="button" class="btn-primary" data-act="import">导入选中（<b class="sel-count">' + rows.filter(importable).length + '</b> 条）</button>' +
-        '<button type="button" class="btn-ghost" data-act="cancel">取消</button>' +
+        '<button type="button" class="btn-primary" data-act="import">?????<b class="sel-count">' + rows.filter(importable).length + '</b> ??</button>' +
+        '<button type="button" class="btn-ghost" data-act="cancel">??</button>' +
       '</div>';
 
     stage1.hidden = true;
@@ -1473,16 +1477,16 @@ function initImportPanel(root) {
     $('[data-act=import]', stage2).addEventListener('click', () => {
       const toImport = rows.filter(importable);
       const dupSkip = rows.filter(r => checked.has(r.id) && r.uniqueId && existing.has(r.uniqueId)).length;
-      if (!toImport.length) { showToast('请先勾选要导入的记录', 'err'); return; }
+      if (!toImport.length) { showToast('??????????', 'err'); return; }
       const recs = DB.records();
       toImport.forEach(r => recs.push({
         id: uid(), date: r.date, type: r.type, amount: r.amount,
-        cat: r.cat, pay: r.source === 'wechat' ? '微信' : r.source === 'alipay' ? '支付宝'
-          : (r.source === 'ccb' || r.source === 'citic' || r.source === 'bank') ? '银行卡' : '其他',
+        cat: r.cat, pay: r.source === 'wechat' ? '??' : r.source === 'alipay' ? '???'
+          : (r.source === 'ccb' || r.source === 'citic' || r.source === 'bank') ? '???' : '??',
         note: r.note, source: r.source, uniqueId: r.uniqueId, createdAt: Date.now()
       }));
       DB.saveRecords(recs);
-      showToast('成功导入 ' + toImport.length + ' 条' + (dupSkip ? '，跳过重复 ' + dupSkip + ' 条' : ''), 'ok');
+      showToast('???? ' + toImport.length + ' ?' + (dupSkip ? '????? ' + dupSkip + ' ?' : ''), 'ok');
       renderMoney();
       reset();
       if (root.closest('.overlay')) closeModal();
@@ -1509,27 +1513,27 @@ function initImportPanel(root) {
   return { reset };
 }
 
-/* ================= 视图：任务 ================= */
+/* ================= ????? ================= */
 const PRI_COLORS = { 2: '#f43f5e', 1: '#f59e0b', 0: '#3b82f6' };
-const CAT_ICONS = { 餐饮: '🍜', 交通: '🚇', 购物: '🛍️', 娱乐: '🎬', 住房: '🏠', 工资: '💰', 医疗: '🏥', 教育: '📚', 旅行: '✈️', 日用: '🧴', 其他: '📦' };
+const CAT_ICONS = { ??: '??', ??: '??', ??: '???', ??: '??', ??: '??', ??: '??', ??: '??', ??: '??', ??: '??', ??: '??', ??: '??' };
 const CAT_KEYS = Object.keys(CAT_ICONS);
-const PAYS = ['微信', '支付宝', '现金', '银行卡', '信用卡', '其他'];
+const PAYS = ['??', '???', '??', '???', '???', '??'];
 
 function taskHTML(t, opts) {
   opts = opts || {};
   const meta = [];
-  if (t.time) meta.push('🕐 ' + t.time);
+  if (t.time) meta.push('?? ' + t.time);
   meta.push(formatDateCN(t.date));
   const priColor = t.pri >= 0 ? PRI_COLORS[t.pri] : null;
   return '<li class="task-wrap" data-id="' + t.id + '"' + (priColor ? ' style="border-left:3px solid ' + priColor + '"' : '') + '>' +
-    '<button type="button" class="del-bg">删除</button>' +
+    '<button type="button" class="del-bg">??</button>' +
     '<div class="task-item swipe-target ' + (t.done ? 'done' : '') + '"' + (opts.drag === false ? '' : ' draggable="true"') + '>' +
-      '<span class="task-circle">✓</span>' +
+      '<span class="task-circle">?</span>' +
       '<div class="task-body">' +
         '<span class="task-text">' + esc(t.text) + '</span>' +
-        '<span class="task-meta">' + meta.join(' · ') + (t.pri >= 0 ? '<span class="pri-dot pri-' + t.pri + '"></span>' : '') + '</span>' +
+        '<span class="task-meta">' + meta.join(' ? ') + (t.pri >= 0 ? '<span class="pri-dot pri-' + t.pri + '"></span>' : '') + '</span>' +
       '</div>' +
-      '<button type="button" class="task-del" title="删除">✕</button>' +
+      '<button type="button" class="task-del" title="??">?</button>' +
     '</div>' +
   '</li>';
 }
@@ -1551,10 +1555,10 @@ function renderRing() {
   bar.style.strokeDasharray = C;
   bar.style.strokeDashoffset = C * (1 - pct / 100);
   $('#ringPct').textContent = pct + '%';
-  $('#ringDone').textContent = done + '/' + total + ' 完成';
+  $('#ringDone').textContent = done + '/' + total + ' ??';
   $('#taskTotal').textContent = total;
   $('#taskDoneNum').textContent = done;
-  $('#taskSub').textContent = total ? (done === total ? '今日任务全部完成，太棒了 🎉' : '今日 ' + total + ' 项 · 已完成 ' + done) : '新的一天，从列好计划开始';
+  $('#taskSub').textContent = total ? (done === total ? '???????????? ??' : '?? ' + total + ' ? ? ??? ' + done) : '????????????';
 }
 
 function renderTasks() {
@@ -1566,11 +1570,11 @@ function renderTasks() {
   list.innerHTML = shown.map(t => taskHTML(t)).join('');
 
   $('#taskEmptyText').textContent =
-    f === 'done' ? '今天还没有已完成的任务' :
-    f === 'todo' ? '全部搞定，休息一下吧 ☕' : '今天还没有任务，输入上方快速添加';
+    f === 'done' ? '???????????' :
+    f === 'todo' ? '?????????? ?' : '????????????????';
   $('#taskEmpty').hidden = shown.length > 0;
 
-  // 近 7 天预告
+  // ? 7 ???
   const soon = DB.tasks().filter(t => {
     if (t.done || t.date === todayStr()) return false;
     const dt = parseDateStr(t.date);
@@ -1578,7 +1582,7 @@ function renderTasks() {
     return diff >= 1 && diff <= 7;
   }).length;
   $('#upcomingChip').hidden = soon === 0;
-  if (soon) $('#upcomingChip').textContent = '📅 近 7 天还有 ' + soon + ' 项任务，点我去日历看看 →';
+  if (soon) $('#upcomingChip').textContent = '?? ? 7 ??? ' + soon + ' ??????????? ?';
 
   $$('.task-wrap', list).forEach(wrap => {
     initSwipe(wrap);
@@ -1597,8 +1601,8 @@ function addTask(raw, date) {
   ts.push({ id: uid(), text: p.text, date: p.date, time: p.time, done: false, pri: -1, order: maxOrder + 1, createdAt: Date.now() });
   DB.saveTasks(ts);
   refreshAll();
-  showToast('已添加：' + p.text, 'ok');
-  if (p.date !== todayStr()) showToast('日期：' + p.date + (p.time ? ' ' + p.time : ''), 'info');
+  showToast('????' + p.text, 'ok');
+  if (p.date !== todayStr()) showToast('???' + p.date + (p.time ? ' ' + p.time : ''), 'info');
 }
 
 function toggleTask(id) {
@@ -1608,13 +1612,13 @@ function toggleTask(id) {
   t.done = !t.done;
   DB.saveTasks(ts);
   refreshAll();
-  if (t.done) showToast('完成 🎉', 'ok');
+  if (t.done) showToast('?? ??', 'ok');
 }
 
 function deleteTask(id) {
   DB.saveTasks(DB.tasks().filter(x => x.id !== id));
   refreshAll();
-  showToast('已删除', 'info');
+  showToast('???', 'info');
 }
 
 function refreshAll() {
@@ -1624,7 +1628,7 @@ function refreshAll() {
   renderFocusStats();
 }
 
-/* 任务拖拽排序（HTML5 DnD，桌面） */
+/* ???????HTML5 DnD???? */
 function initTaskDrag(list) {
   let dragEl = null;
   list.addEventListener('dragstart', e => {
@@ -1665,7 +1669,7 @@ function getDragAfterEl(list, y) {
   return closest ? closest.closest('.task-wrap') : null;
 }
 
-/* 左滑删除（触屏） */
+/* ???????? */
 function initSwipe(wrap) {
   const item = wrap.querySelector('.swipe-target');
   if (!item) return;
@@ -1694,7 +1698,7 @@ function initSwipe(wrap) {
   wrap.addEventListener('pointercancel', end);
 }
 
-/* 长按设置优先级 */
+/* ??????? */
 function initLongPress(el, cb) {
   let timer = null, sx = 0, sy = 0;
   const cancel = () => { clearTimeout(timer); timer = null; };
@@ -1717,13 +1721,23 @@ function openPriMenu(id, x, y) {
   pop.hidden = false;
   pop.dataset.id = id;
   pop.style.left = '0px'; pop.style.top = '0px';
-  const r = pop.getBoundingClientRect();
-  let left = Math.min(x, innerWidth - r.width - 10), top = Math.min(y + 14, innerHeight - r.height - 10);
-  pop.style.left = Math.max(8, left) + 'px';
-  pop.style.top = Math.max(8, top) + 'px';
+  requestAnimationFrame(() => {
+    const r = pop.getBoundingClientRect();
+    const pad = 8;
+    const vw = document.documentElement.clientWidth || innerWidth;
+    const vh = document.documentElement.clientHeight || innerHeight;
+    let left = Math.max(pad, x + 6);
+    let top = y + 14;
+    // ?????????????????????????
+    if (top + r.height + pad > vh) top = y - r.height - 14;
+    if (left + r.width + pad > vw) left = vw - r.width - pad;
+    if (top < pad) top = pad;
+    pop.style.left = Math.max(pad, left) + 'px';
+    pop.style.top = top + 'px';
+  });
 }
 
-/* ================= 视图：日历 ================= */
+/* ================= ????? ================= */
 function groupTasksByDate() {
   const map = {};
   DB.tasks().forEach(t => {
@@ -1735,7 +1749,7 @@ function groupTasksByDate() {
 
 function renderCalendar() {
   const y = state.calCursor.getFullYear(), m = state.calCursor.getMonth();
-  $('#calTitle').textContent = y + '年' + (m + 1) + '月';
+  $('#calTitle').textContent = y + '?' + (m + 1) + '?';
   const first = new Date(y, m, 1);
   const offset = (first.getDay() + 6) % 7;
   const daysInMonth = new Date(y, m + 1, 0).getDate();
@@ -1769,40 +1783,40 @@ function renderCalDetail() {
   const ds = state.calSelected;
   const tds = ds ? DB.tasks().filter(t => t.date === ds).sort((a, b) => (a.order || 0) - (b.order || 0)) : [];
   $('#calDetailDate').textContent = ds ? formatDateCN(ds) : '';
-  $('#calDetailCount').textContent = tds.length ? tds.length + ' 项 · 已完成 ' + tds.filter(t => t.done).length : '';
+  $('#calDetailCount').textContent = tds.length ? tds.length + ' ? ? ??? ' + tds.filter(t => t.done).length : '';
   $('#calTaskList').innerHTML = tds.map(t => taskHTML(t, { drag: false })).join('');
   $('#calEmpty').hidden = tds.length > 0;
   $('#calDetail').classList.toggle('open', !!ds);
   $$('#calTaskList .task-wrap').forEach(initSwipe);
 }
 
-/* ================= 视图：记账 ================= */
+/* ================= ????? ================= */
 function renderMoney() {
   const recs = DB.records();
   const ym = state.moneyMonth;
   const monthRecs = recs.filter(r => r.date.slice(0, 7) === ym);
   const sum = (arr, t) => Math.round(arr.filter(r => r.type === t).reduce((a, r) => a + r.amount, 0) * 100) / 100;
   const inc = sum(monthRecs, 'in'), exp = sum(monthRecs, 'out');
-  $('#statIn').textContent = '¥' + fmtMoney(inc);
-  $('#statOut').textContent = '¥' + fmtMoney(exp);
-  $('#statBal').textContent = '¥' + fmtMoney(inc - exp);
-  $('#moneyMonthLabel').textContent = ym.slice(0, 4) + '年' + (+ym.slice(5, 7)) + '月';
+  $('#statIn').textContent = '?' + fmtMoney(inc);
+  $('#statOut').textContent = '?' + fmtMoney(exp);
+  $('#statBal').textContent = '?' + fmtMoney(inc - exp);
+  $('#moneyMonthLabel').textContent = ym.slice(0, 4) + '?' + (+ym.slice(5, 7)) + '?';
   const isCur = ym === todayStr().slice(0, 7);
   const daysIn = isCur ? new Date().getDate() : new Date(+ym.slice(0, 4), +ym.slice(5, 7), 0).getDate();
-  $('#moneySub').textContent = ym + ' 共 ' + monthRecs.length + ' 条记录 · 日均支出 ¥' + fmtMoney(exp / Math.max(1, daysIn));
+  $('#moneySub').textContent = ym + ' ? ' + monthRecs.length + ' ??? ? ???? ?' + fmtMoney(exp / Math.max(1, daysIn));
   const py = new Date(+ym.slice(0, 4), +ym.slice(5, 7) - 2, 1);
   const pym = py.getFullYear() + '-' + pad(py.getMonth() + 1);
   const prevExp = sum(recs.filter(r => r.date.slice(0, 7) === pym), 'out');
   const vs = $('#monthVs');
   if (prevExp > 0) {
     const delta = Math.round((exp - prevExp) / prevExp * 100);
-    vs.textContent = delta > 0 ? '较上月支出 +' + delta + '%' : delta < 0 ? '较上月支出 −' + Math.abs(delta) + '%' : '与上月持平';
+    vs.textContent = delta > 0 ? '????? +' + delta + '%' : delta < 0 ? '????? ?' + Math.abs(delta) + '%' : '?????';
     vs.className = 'month-vs ' + (delta > 0 ? 'up' : delta < 0 ? 'down' : '');
   } else {
     vs.textContent = '';
     vs.className = 'month-vs';
   }
-  $('#budgetLabel').textContent = isCur ? '🎯 本月支出预算' : '🎯 ' + ym + ' 支出预算';
+  $('#budgetLabel').textContent = isCur ? '?? ??????' : '?? ' + ym + ' ????';
   renderBudget(ym);
   renderChart();
   renderDonut(ym);
@@ -1819,7 +1833,7 @@ function shiftMoneyMonth(delta) {
   renderMoney();
 }
 
-const DONUT_COLORS = { 餐饮: '#10b981', 交通: '#3b82f6', 购物: '#8b5cf6', 娱乐: '#f59e0b', 住房: '#6366f1', 工资: '#14b8a6', 医疗: '#e11d48', 教育: '#0ea5e9', 旅行: '#f97316', 日用: '#84cc16', 其他: '#94a3b8' };
+const DONUT_COLORS = { ??: '#10b981', ??: '#3b82f6', ??: '#8b5cf6', ??: '#f59e0b', ??: '#6366f1', ??: '#14b8a6', ??: '#e11d48', ??: '#0ea5e9', ??: '#f97316', ??: '#84cc16', ??: '#94a3b8' };
 
 function renderBudget(ym) {
   const s = DB.settings();
@@ -1827,28 +1841,28 @@ function renderBudget(ym) {
   const exp = DB.records().filter(r => r.type === 'out' && r.date.slice(0, 7) === ym).reduce((a, r) => a + r.amount, 0);
   const body = $('#budgetBody'), bar = $('#budgetBar'), meta = $('#budgetMeta');
   if (!budget) {
-    body.textContent = '还没有设置预算';
+    body.textContent = '???????';
     bar.style.width = '0%';
     bar.style.background = 'linear-gradient(90deg,var(--green),var(--accent))';
-    meta.textContent = '设置一个每月支出上限，帮你控制开销';
+    meta.textContent = '?????????????????';
     return;
   }
   const pct = Math.min(100, Math.round(exp / budget * 100));
-  body.textContent = '已用 ¥' + fmtMoney(exp) + ' / ¥' + fmtMoney(budget);
+  body.textContent = '?? ?' + fmtMoney(exp) + ' / ?' + fmtMoney(budget);
   bar.style.width = pct + '%';
   bar.style.background = pct >= 100
     ? 'linear-gradient(90deg,var(--red),#f97316)'
     : pct >= 75 ? 'linear-gradient(90deg,var(--orange),var(--red))'
     : 'linear-gradient(90deg,var(--green),var(--accent))';
   meta.textContent = exp > budget
-    ? '已超支 ¥' + fmtMoney(exp - budget) + '，接下来要收紧支出了'
-    : '剩余 ¥' + fmtMoney(budget - exp) + '（已用 ' + pct + '%）';
+    ? '??? ?' + fmtMoney(exp - budget) + '??????????'
+    : '?? ?' + fmtMoney(budget - exp) + '??? ' + pct + '%?';
 }
 
 function chartBarsHTML(inc, exp, max) {
   return '<div class="chart-bars">' +
-    (inc ? '<div class="cbar in" style="height:' + (inc / max * 100) + '%" title="收入 ¥' + fmtMoney(inc) + '"></div>' : '') +
-    (exp ? '<div class="cbar out" style="height:' + (exp / max * 100) + '%" title="支出 ¥' + fmtMoney(exp) + '"></div>' : '') +
+    (inc ? '<div class="cbar in" style="height:' + (inc / max * 100) + '%" title="?? ?' + fmtMoney(inc) + '"></div>' : '') +
+    (exp ? '<div class="cbar out" style="height:' + (exp / max * 100) + '%" title="?? ?' + fmtMoney(exp) + '"></div>' : '') +
   '</div>';
 }
 
@@ -1859,7 +1873,7 @@ function renderChart() {
     const months = [];
     for (let i = 5; i >= 0; i--) {
       const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
-      months.push({ key: d.getFullYear() + '-' + pad(d.getMonth() + 1), label: (d.getMonth() + 1) + '月', inc: 0, exp: 0 });
+      months.push({ key: d.getFullYear() + '-' + pad(d.getMonth() + 1), label: (d.getMonth() + 1) + '?', inc: 0, exp: 0 });
     }
     DB.records().forEach(r => {
       const mo = months.find(x => x.key === r.date.slice(0, 7));
@@ -1867,7 +1881,7 @@ function renderChart() {
     });
     const mMax = Math.max(1, ...months.map(d => Math.max(d.inc, d.exp)));
     el.innerHTML = months.map(d =>
-      '<div class="chart-day" title="' + d.label + '  收 ¥' + fmtMoney(d.inc) + ' / 支 ¥' + fmtMoney(d.exp) + '">' +
+      '<div class="chart-day" title="' + d.label + '  ? ?' + fmtMoney(d.inc) + ' / ? ?' + fmtMoney(d.exp) + '">' +
         chartBarsHTML(d.inc, d.exp, mMax) + '<span>' + d.label + '</span>' +
       '</div>').join('');
     return;
@@ -1883,7 +1897,7 @@ function renderChart() {
   });
   const dMax = Math.max(1, ...days.map(d => Math.max(d.inc, d.exp)));
   el.innerHTML = days.map(d =>
-    '<div class="chart-day" title="' + d.label + '  收 ¥' + fmtMoney(d.inc) + ' / 支 ¥' + fmtMoney(d.exp) + '">' +
+    '<div class="chart-day" title="' + d.label + '  ? ?' + fmtMoney(d.inc) + ' / ? ?' + fmtMoney(d.exp) + '">' +
       chartBarsHTML(d.inc, d.exp, dMax) + '<span>' + d.label + '</span>' +
     '</div>').join('');
 }
@@ -1893,7 +1907,7 @@ function renderDonut(ym) {
   const total = recs.reduce((a, r) => a + r.amount, 0);
   const cats = {};
   recs.forEach(r => { cats[r.cat] = Math.round(((cats[r.cat] || 0) + r.amount) * 100) / 100; });
-  $('#donutTotal').textContent = '¥' + fmtMoney(total);
+  $('#donutTotal').textContent = '?' + fmtMoney(total);
   const entries = Object.entries(cats).sort((a, b) => b[1] - a[1]);
   let css = 'conic-gradient(';
   let acc = 0;
@@ -1907,8 +1921,8 @@ function renderDonut(ym) {
   $('#catDonut').style.background = css;
   $('#donutLegend').innerHTML = entries.length ? entries.map(([k, v]) => {
     const pct = total ? Math.round(v / total * 100) : 0;
-    return '<li><i style="background:' + (DONUT_COLORS[k] || '#94a3b8') + '"></i><span>' + k + '</span><b>¥' + fmtMoney(v) + '</b><em>' + pct + '%</em></li>';
-  }).join('') : '<li class="empty-li">本月还没有支出</li>';
+    return '<li><i style="background:' + (DONUT_COLORS[k] || '#94a3b8') + '"></i><span>' + k + '</span><b>?' + fmtMoney(v) + '</b><em>' + pct + '%</em></li>';
+  }).join('') : '<li class="empty-li">???????</li>';
 }
 
 function filteredRecords() {
@@ -1932,9 +1946,9 @@ function renderRecFilters() {
   const months = new Set(DB.records().map(r => r.date.slice(0, 7)));
   months.add(todayStr().slice(0, 7));
   const monthArr = [...months].sort().reverse();
-  $('#recFCat').innerHTML = '<option value="">全部分类</option>' + CAT_KEYS.map(c => '<option value="' + c + '">' + c + '</option>').join('');
-  $('#recFPay').innerHTML = '<option value="">全部方式</option>' + PAYS.map(p => '<option value="' + p + '">' + p + '</option>').join('');
-  $('#recFMonth').innerHTML = '<option value="">全部月份</option>' + monthArr.map(m => '<option value="' + m + '">' + m + '</option>').join('');
+  $('#recFCat').innerHTML = '<option value="">????</option>' + CAT_KEYS.map(c => '<option value="' + c + '">' + c + '</option>').join('');
+  $('#recFPay').innerHTML = '<option value="">????</option>' + PAYS.map(p => '<option value="' + p + '">' + p + '</option>').join('');
+  $('#recFMonth').innerHTML = '<option value="">????</option>' + monthArr.map(m => '<option value="' + m + '">' + m + '</option>').join('');
   $('#recFCat').value = state.recFilter.cat;
   $('#recFPay').value = state.recFilter.pay;
   $('#recFMonth').value = state.recFilter.month;
@@ -1942,22 +1956,22 @@ function renderRecFilters() {
 }
 
 function recItemHTML(r) {
-  const src = r.source === 'alipay' ? '支付宝' : r.source === 'wechat' ? '微信'
-    : r.source === 'ccb' ? '建行' : r.source === 'citic' ? '中信' : '';
+  const src = r.source === 'alipay' ? '???' : r.source === 'wechat' ? '??'
+    : r.source === 'ccb' ? '??' : r.source === 'citic' ? '??' : '';
   const parts = [formatDateCN(r.date)];
   if (src) parts.push(src);
   if (r.cat) parts.push(r.cat);
   if (r.pay) parts.push(r.pay);
   return '<li class="rec-wrap" data-id="' + r.id + '">' +
-    '<button type="button" class="del-bg">删除</button>' +
-    '<div class="rec-item swipe-target" title="点击编辑">' +
-      '<span class="rec-ico">' + (CAT_ICONS[r.cat] || '📦') + '</span>' +
+    '<button type="button" class="del-bg">??</button>' +
+    '<div class="rec-item swipe-target" title="????">' +
+      '<span class="rec-ico">' + (CAT_ICONS[r.cat] || '??') + '</span>' +
       '<div class="rec-body">' +
         '<div class="rec-note">' + esc(r.note) + '</div>' +
-        '<div class="rec-meta">' + parts.join(' · ') + '</div>' +
+        '<div class="rec-meta">' + parts.join(' ? ') + '</div>' +
       '</div>' +
-      '<span class="rec-amt ' + r.type + '">' + (r.type === 'in' ? '+' : '−') + fmtMoney(r.amount) + '</span>' +
-      '<button type="button" class="rec-del" title="删除">✕</button>' +
+      '<span class="rec-amt ' + r.type + '">' + (r.type === 'in' ? '+' : '?') + fmtMoney(r.amount) + '</span>' +
+      '<button type="button" class="rec-del" title="??">?</button>' +
     '</div>' +
   '</li>';
 }
@@ -1970,7 +1984,7 @@ function renderRecList() {
   const all = DB.records().length;
   const f = state.recFilter;
   const hasFilter = f.q || f.cat || f.pay || f.month || f.type !== 'all';
-  $('#recCount').textContent = all ? (hasFilter ? '筛选 ' + total + ' / 共 ' + all + ' 条' : '共 ' + total + ' 条') : '';
+  $('#recCount').textContent = all ? (hasFilter ? '?? ' + total + ' / ? ' + all + ' ?' : '? ' + total + ' ?') : '';
   const groups = [];
   shown.forEach(r => {
     const last = groups[groups.length - 1];
@@ -1980,7 +1994,7 @@ function renderRecList() {
   $('#recList').innerHTML = groups.map(g => {
     const gExp = g.items.filter(x => x.type === 'out').reduce((a, x) => a + x.amount, 0);
     const gInc = g.items.filter(x => x.type === 'in').reduce((a, x) => a + x.amount, 0);
-    const sub = '支出 ¥' + fmtMoney(gExp) + (gInc ? ' · 收入 ¥' + fmtMoney(gInc) : '') + '（' + g.items.length + '笔）';
+    const sub = '?? ?' + fmtMoney(gExp) + (gInc ? ' ? ?? ?' + fmtMoney(gInc) : '') + '?' + g.items.length + '??';
     return '<li class="rec-group">' +
       '<div class="rec-day-head"><span>' + formatDateCN(g.date) + '</span><span class="rec-day-sub">' + sub + '</span></div>' +
       '<ul class="rec-group-list">' + g.items.map(recItemHTML).join('') + '</ul>' +
@@ -1993,11 +2007,11 @@ function renderRecList() {
 
 function exportRecordsCSV() {
   const recs = filteredRecords();
-  if (!recs.length) { showToast('当前筛选下没有可导出的记录', 'err'); return; }
-  const head = '日期,类型,金额,分类,支付方式,备注';
+  if (!recs.length) { showToast('?????????????', 'err'); return; }
+  const head = '??,??,??,??,????,??';
   const lines = recs.map(r => [
     r.date,
-    r.type === 'in' ? '收入' : '支出',
+    r.type === 'in' ? '??' : '??',
     r.amount,
     r.cat || '',
     r.pay || '',
@@ -2007,12 +2021,12 @@ function exportRecordsCSV() {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'flowday-账单-' + todayStr() + '.csv';
+  a.download = 'flowday-??-' + todayStr() + '.csv';
   document.body.appendChild(a);
   a.click();
   a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1500);
-  showToast('已导出 ' + recs.length + ' 条记录', 'ok');
+  showToast('??? ' + recs.length + ' ???', 'ok');
 }
 
 function deleteRecord(id) {
@@ -2022,19 +2036,19 @@ function deleteRecord(id) {
   const removed = recs.splice(idx, 1)[0];
   DB.saveRecords(recs);
   renderMoney();
-  showToast('已删除', 'info', [{
-    label: '撤销',
+  showToast('???', 'info', [{
+    label: '??',
     fn: () => {
       const cur = DB.records();
       cur.push(removed);
       DB.saveRecords(cur);
       renderMoney();
-      showToast('已恢复', 'ok');
+      showToast('???', 'ok');
     }
   }]);
 }
 
-/* 编辑记录弹窗 */
+/* ?????? */
 function catGridHTML(sel) {
   return CAT_KEYS.map(c =>
     '<button type="button" class="cat' + (c === sel ? ' on' : '') + '" data-cat="' + c + '">' +
@@ -2061,7 +2075,7 @@ function openRecModal(id) {
   state.rmId = id;
   $('#rmAmount').value = r.amount;
   setRMType(r.type);
-  state.rmCat = r.cat || '其他';
+  state.rmCat = r.cat || '??';
   $('#rmCatGrid').innerHTML = catGridHTML(state.rmCat);
   $('#rmDate').value = r.date || todayStr();
   $('#rmPay').value = r.pay || '';
@@ -2075,7 +2089,7 @@ function closeRecModal() {
   if ($('#importModal').hidden) document.body.style.overflow = '';
 }
 
-/* ================= 视图：专注番茄 ================= */
+/* ================= ??????? ================= */
 const Focus = { duration: 25 * 60, remaining: 25 * 60, running: false, endAt: null, timer: null };
 const FR_C = 2 * Math.PI * 112;
 
@@ -2088,9 +2102,9 @@ function renderFocusStats() {
   const allCount = t.sessions.length;
   const allSec = t.sessions.reduce((a, s) => a + s.seconds, 0);
   $('#statTodayCount').textContent = todayCount;
-  $('#statTodayMin').textContent = Math.round(todaySec / 60) + ' 分钟';
+  $('#statTodayMin').textContent = Math.round(todaySec / 60) + ' ??';
   $('#statAllCount').textContent = allCount;
-  $('#statAllMin').textContent = Math.round(allSec / 60) + ' 分钟';
+  $('#statAllMin').textContent = Math.round(allSec / 60) + ' ??';
 }
 
 function renderFocus() {
@@ -2101,10 +2115,10 @@ function renderFocus() {
   bar.style.strokeDasharray = FR_C;
   bar.style.strokeDashoffset = FR_C * pct;
   $('#focusTime').textContent = pad(Math.floor(rem / 60)) + ':' + pad(rem % 60);
-  $('#focusBtn').textContent = Focus.running ? '⏸ 暂停' : (rem > 0 && rem < total ? '▶ 继续' : '▶ 开始');
+  $('#focusBtn').textContent = Focus.running ? '? ??' : (rem > 0 && rem < total ? '? ??' : '? ??');
   $('#focusBtn').classList.toggle('running', Focus.running);
-  $('#focusState').textContent = Focus.running ? '🍅 专注中' : (rem < total ? '已暂停' : '准备就绪');
-  $('#focusSub').textContent = Focus.running ? '保持专注，别分心' : (rem < total ? '剩余 ' + pad(Math.floor(rem / 60)) + ':' + pad(rem % 60) : '点击开始，专注一轮');
+  $('#focusState').textContent = Focus.running ? '?? ???' : (rem < total ? '???' : '????');
+  $('#focusSub').textContent = Focus.running ? '????????' : (rem < total ? '?? ' + pad(Math.floor(rem / 60)) + ':' + pad(rem % 60) : '?????????');
   renderFocusStats();
 }
 
@@ -2151,8 +2165,8 @@ function completeFocus() {
   delete t.running;
   DB.saveTomato(t);
   playChime();
-  notifyUser('番茄完成 🍅', '这一轮专注结束，休息一下吧！');
-  showToast('番茄完成，休息一下吧 🍅', 'ok');
+  notifyUser('???? ??', '??????????????');
+  showToast('?????????? ??', 'ok');
   renderFocus();
 }
 
@@ -2196,7 +2210,7 @@ function notifyUser(title, body) {
   }
 }
 
-/* ================= 数据备份 / 恢复 ================= */
+/* ================= ???? / ?? ================= */
 function exportBackup() {
   const data = {
     app: 'FlowDay',
@@ -2217,7 +2231,7 @@ function exportBackup() {
   a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 1500);
   $('#backupPop').hidden = true;
-  showToast('备份文件已导出', 'ok');
+  showToast('???????', 'ok');
 }
 
 function importBackup(file) {
@@ -2234,26 +2248,26 @@ function importBackup(file) {
         flowday_settings: v => v && typeof v === 'object' && !Array.isArray(v)
       };
       if (!Object.keys(shapes).some(k => obj[k] !== undefined)) throw new Error('bad');
-      if (!confirm('恢复备份会覆盖当前数据，确定继续吗？')) return;
+      if (!confirm('??????????????????')) return;
       let restored = 0;
       Object.keys(shapes).forEach(k => {
         if (obj[k] !== undefined && shapes[k](obj[k])) { localStorage.setItem(k, JSON.stringify(obj[k])); restored++; }
       });
-      if (!restored) { showToast('备份文件里没有可恢复的数据', 'err'); return; }
+      if (!restored) { showToast('?????????????', 'err'); return; }
       applyTheme(DB.settings().theme);
       resumeFocusIfNeeded();
       refreshAll();
       $('#backupPop').hidden = true;
-      showToast('恢复成功，已导入 ' + restored + ' 组数据', 'ok');
+      showToast('???????? ' + restored + ' ???', 'ok');
     } catch (e) {
-      showToast('备份文件格式不正确', 'err');
+      showToast('?????????', 'err');
     }
   };
-  reader.onerror = () => showToast('读取文件失败', 'err');
+  reader.onerror = () => showToast('??????', 'err');
   reader.readAsText(file);
 }
 
-/* ================= AI 理财助手（只读分析账单） ================= */
+/* ================= AI ?????????????? ================= */
 const AI_DEFAULTS = {
   base: 'https://api.deepseek.com/v1',
   model: 'deepseek-v4-flash',
@@ -2283,56 +2297,122 @@ function buildFinancialContext() {
   const inc = sum(cur, 'in'), exp = sum(cur, 'out');
   const cats = {};
   cur.filter(r => r.type === 'out').forEach(r => { cats[r.cat] = Math.round(((cats[r.cat] || 0) + r.amount) * 100) / 100; });
-  const catArr = Object.entries(cats).sort((a, b) => b[1] - a[1]).map(([k, v]) => k + ' ' + v + '元');
+  const catArr = Object.entries(cats).sort((a, b) => b[1] - a[1]).map(([k, v]) => k + ' ' + v + '?');
   const months = [];
   for (let i = 2; i >= 0; i--) {
     const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
     const key = d.getFullYear() + '-' + pad(d.getMonth() + 1);
     const ms = recs.filter(r => r.date.slice(0, 7) === key);
-    months.push(key + '：收入 ' + sum(ms, 'in') + '元，支出 ' + sum(ms, 'out') + '元，结余 ' + Math.round((sum(ms, 'in') - sum(ms, 'out')) * 100) / 100 + '元');
+    months.push(key + '??? ' + sum(ms, 'in') + '???? ' + sum(ms, 'out') + '???? ' + Math.round((sum(ms, 'in') - sum(ms, 'out')) * 100) / 100 + '?');
   }
   const mers = {};
   cur.filter(r => r.type === 'out').forEach(r => {
-    const k = (r.note || '其他').split(' · ')[0].slice(0, 12);
+    const k = (r.note || '??').split(' ? ')[0].slice(0, 12);
     mers[k] = Math.round(((mers[k] || 0) + r.amount) * 100) / 100;
   });
-  const topM = Object.entries(mers).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([k, v]) => k + ' ' + v + '元');
+  const topM = Object.entries(mers).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([k, v]) => k + ' ' + v + '?');
   const budget = parseFloat(DB.settings().budget) || 0;
   const payCats = {};
   cur.forEach(r => {
-    const k = r.pay || (r.type === 'in' ? '(收入)' : '(未记录)');
+    const k = r.pay || (r.type === 'in' ? '(??)' : '(???)');
     payCats[k] = Math.round(((payCats[k] || 0) + r.amount) * 100) / 100;
   });
-  const payArr = Object.entries(payCats).sort((a, b) => b[1] - a[1]).map(([k, v]) => k + ' ' + v + '元');
+  const payArr = Object.entries(payCats).sort((a, b) => b[1] - a[1]).map(([k, v]) => k + ' ' + v + '?');
   const src = {
-    支付宝: recs.filter(r => r.source === 'alipay').length,
-    微信: recs.filter(r => r.source === 'wechat').length,
-    建行: recs.filter(r => r.source === 'ccb').length,
-    中信: recs.filter(r => r.source === 'citic').length,
-    手动记账: recs.filter(r => r.source === 'manual').length
+    ???: recs.filter(r => r.source === 'alipay').length,
+    ??: recs.filter(r => r.source === 'wechat').length,
+    ??: recs.filter(r => r.source === 'ccb').length,
+    ??: recs.filter(r => r.source === 'citic').length,
+    ????: recs.filter(r => r.source === 'manual').length
   };
   return [
-    '【账单数据概览】',
-    '记录总数：' + recs.length + ' 条（来源：' + Object.entries(src).map(([k, v]) => k + ' ' + v + '条').join('，') + '）',
-    '当前月份：' + ym,
-    '本月收入：' + inc + ' 元',
-    '本月支出：' + exp + ' 元',
-    '本月结余：' + Math.round((inc - exp) * 100) / 100 + ' 元',
-    '本月支出分类（从高到低）：' + (catArr.length ? catArr.join('，') : '暂无支出记录'),
-    '支出最多的 5 个商户：' + (topM.length ? topM.join('，') : '暂无'),
-    '本月支付方式：' + (payArr.length ? payArr.join('，') : '无'),
-    '本月预算：' + (budget ? budget + ' 元，已用 ' + exp + ' 元' : '未设置'),
-    '近三个月收支：' + months.join('；')
+    '????????',
+    '?????' + recs.length + ' ?????' + Object.entries(src).map(([k, v]) => k + ' ' + v + '?').join('?') + '?',
+    '?????' + ym,
+    '?????' + inc + ' ?',
+    '?????' + exp + ' ?',
+    '?????' + Math.round((inc - exp) * 100) / 100 + ' ?',
+    '?????????????' + (catArr.length ? catArr.join('?') : '??????'),
+    '????? 5 ????' + (topM.length ? topM.join('?') : '??'),
+    '???????' + (payArr.length ? payArr.join('?') : '?'),
+    '?????' + (budget ? budget + ' ???? ' + exp + ' ?' : '???'),
+    '???????' + months.join('?')
   ].join('\n');
 }
-const AI_SYSTEM = '你是 FlowDay 的 AI 理财小助手。你只能基于用户提供的账单汇总数据进行分析，不得编造或推算超出数据的信息。' +
-  '回答要求：使用简体中文；先给结论，再给具体建议；指出支出大户和可优化空间；建议要具体、可执行（例如预算分配、消费习惯、替代方案），但不要承诺投资收益，涉及投资时提示风险。' +
-  '回答尽量控制在 300 字以内。';
+function priLabel(p) {
+  return p === 2 ? '?' : p === 1 ? '?' : p === 0 ? '?' : '?';
+}
+function daysAgoStr(n) {
+  const d = new Date();
+  d.setDate(d.getDate() - n);
+  return todayStr(d);
+}
+function buildTaskContext() {
+  const ts = DB.tasks();
+  const today = todayStr();
+  const done = ts.filter(t => t.done);
+  const todo = ts.filter(t => !t.done);
+  const overdue = todo.filter(t => t.date < today);
+  const soon = todo.filter(t => t.date > today && (parseDateStr(t.date) - parseDateStr(today)) / 86400000 <= 7);
+  const lines = ['??????',
+    '???? ' + ts.length + ' ? ??? ' + todo.length + ' ? ??? ' + done.length +
+    (overdue.length ? ' ? ??? ' + overdue.length + ' ?' : '') +
+    (soon.length ? ' ? ?? 7 ? ' + soon.length + ' ?' : '')];
+  const sorted = [...todo].sort((a, b) =>
+    (a.date + ' ' + (a.time || '')).localeCompare(b.date + ' ' + (b.time || '')) || (a.order || 0) - (b.order || 0));
+  lines.push('????????' + sorted.length + ' ?????? 200 ???');
+  sorted.slice(0, 200).forEach(t => lines.push('- ' + t.date + (t.time ? ' ' + t.time : '') + ' [' + priLabel(t.pri) + '] ' + t.text));
+  if (sorted.length > 200) lines.push('??? ' + (sorted.length - 200) + ' ????');
+  return lines.join('\n');
+}
+function buildFocusContext() {
+  const t = DB.tomato();
+  const sess = Array.isArray(t.sessions) ? t.sessions : [];
+  const duration = parseInt(t.duration, 10) || 25;
+  const mins = arr => Math.round(arr.reduce((a, s) => a + (Number(s.seconds) || 0), 0) / 60);
+  const todayS = sess.filter(s => s.date === todayStr());
+  const weekS = sess.filter(s => s.date >= daysAgoStr(6));
+  const monthS = sess.filter(s => s.date >= daysAgoStr(29));
+  return [
+    '??????',
+    '???????' + duration + ' ??',
+    '???? ' + todayS.length + ' ????? ' + mins(todayS) + ' ???',
+    '? 7 ??? ' + weekS.length + ' ????? ' + mins(weekS) + ' ???',
+    '? 30 ??? ' + monthS.length + ' ????? ' + mins(monthS) + ' ???',
+    '???? ' + sess.length + ' ????? ' + mins(sess) + ' ???'
+  ].join('\n');
+}
+function buildSettingsContext() {
+  const st = DB.settings();
+  const budget = parseFloat(st.budget) || 0;
+  return [
+    '???????',
+    '???' + (st.theme || 'auto'),
+    '?????' + (budget ? budget + ' ?' : '???'),
+    '?????' + (parseInt(DB.tomato().duration, 10) || 25) + ' ??',
+    'AI ???' + (st.aiModel || AI_DEFAULTS.model)
+  ].join('\n');
+}
+function buildAppContext() {
+  return [
+    buildTaskContext(),
+    buildFocusContext(),
+    buildSettingsContext(),
+    buildFinancialContext()
+  ].join('\n');
+}
+const AI_SYSTEM = '?? FlowDay ? AI ?????????????????????????????????????????????????' +
+  '??????????????????????????????????????????????????????????????????????????????????' +
+  '???????????????????????????????????????????????????????????????????????/??????' +
+  '??????? 400 ????';
 const AI_QUICK = {
-  sum: '请帮我总结本月收支情况，并给出 3 条最实在的建议。',
-  cat: '请分析本月各类支出的占比，指出哪些类开销偏大，并给出优化建议。',
-  save: '基于我的账单，帮我找 3-5 个可以省钱的具体切入点。',
-  trend: '分析近三个月的收支趋势，评估我的储蓄情况，并给出改善建议。'
+  today: '?????????????????????????????????',
+  sum: '??????????????? 3 ????????',
+  cat: '???????????????????????????????',
+  save: '?????????? 3-5 ????????????',
+  trend: '?????????????????????????????',
+  task: '???? 7 ?????????????????????????????',
+  focus: '??????????????????????????????'
 };
 function addAIMsg(role, text, cls) {
   const el = document.createElement('div');
@@ -2348,12 +2428,12 @@ async function sendAIMessage(text) {
   if (!q) return;
   $('#aiInput').value = '';
   addAIMsg('user', q);
-  const typing = addAIMsg('bot', '思考中…', 'typing');
+  const typing = addAIMsg('bot', '????', 'typing');
   const sendBtn = $('#aiForm button');
   sendBtn.disabled = true;
   try {
     const cfg = aiSettings();
-    if (!cfg.key) throw new Error('请先在「接口设置」里填写 API Key');
+    if (!cfg.key) throw new Error('???????????? API Key');
     const res = await fetch(cfg.base + '/chat/completions', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + cfg.key },
@@ -2361,7 +2441,7 @@ async function sendAIMessage(text) {
         model: cfg.model,
         messages: [
           { role: 'system', content: AI_SYSTEM },
-          { role: 'user', content: buildFinancialContext() + '\n\n【用户问题】' + q }
+          { role: 'user', content: buildAppContext() + '\n\n??????' + q }
         ],
         temperature: 0.7,
         stream: false
@@ -2369,19 +2449,19 @@ async function sendAIMessage(text) {
     });
     if (!res.ok) {
       let detail = 'HTTP ' + res.status;
-      try { const j = await res.json(); if (j && j.error && j.error.message) detail += '：' + j.error.message; } catch (e) {}
+      try { const j = await res.json(); if (j && j.error && j.error.message) detail += '?' + j.error.message; } catch (e) {}
       throw new Error(detail);
     }
     const j = await res.json();
     const msg = j.choices && j.choices[0] && j.choices[0].message ? j.choices[0].message : null;
     let content = msg ? (msg.content || '') : '';
-    if (!content && msg && msg.reasoning_content) content = '【思考过程】\n' + msg.reasoning_content;
+    if (!content && msg && msg.reasoning_content) content = '??????\n' + msg.reasoning_content;
     typing.remove();
-    if (!content) { addAIMsg('bot', '（模型没有返回内容）', 'err'); return; }
+    if (!content) { addAIMsg('bot', '??????????', 'err'); return; }
     addAIMsg('bot', content);
   } catch (e) {
     typing.remove();
-    addAIMsg('bot', '出错了：' + e.message + '（可检查接口设置，或确认浏览器允许跨域请求）', 'err');
+    addAIMsg('bot', '????' + e.message + '??????????????????????', 'err');
   } finally {
     sendBtn.disabled = false;
     $('#aiChat').scrollTop = $('#aiChat').scrollHeight;
@@ -2391,7 +2471,7 @@ async function testAIConnection() {
   const cfg = aiSettings();
   const btn = $('#aiTest'), out = $('#aiTestResult');
   btn.disabled = true;
-  out.textContent = '测试中…';
+  out.textContent = '????';
   try {
     const res = await fetch(cfg.base + '/chat/completions', {
       method: 'POST',
@@ -2400,13 +2480,13 @@ async function testAIConnection() {
     });
     if (!res.ok) {
       let detail = 'HTTP ' + res.status;
-      try { const j = await res.json(); if (j && j.error && j.error.message) detail += '：' + j.error.message; } catch (e) {}
+      try { const j = await res.json(); if (j && j.error && j.error.message) detail += '?' + j.error.message; } catch (e) {}
       throw new Error(detail);
     }
-    out.textContent = '✓ 连接成功';
-    showToast('AI 接口连接成功', 'ok');
+    out.textContent = '? ????';
+    showToast('AI ??????', 'ok');
   } catch (e) {
-    out.textContent = '✗ ' + e.message;
+    out.textContent = '? ' + e.message;
   } finally {
     btn.disabled = false;
   }
@@ -2417,40 +2497,40 @@ function openAIPanel() {
   $('#aiModel').value = DB.settings().aiModel || AI_DEFAULTS.model;
   $('#aiKey').value = DB.settings().aiKey || AI_DEFAULTS.key;
   if (!$('#aiChat').children.length) {
-    addAIMsg('bot', '你好，我是你的理财小助手 ✦\n我只能读取你在 FlowDay 里保存的账单数据（微信 / 支付宝导入 + 手动记账），帮你归纳和给建议，不会修改任何数据。\n\n试试上面的快捷问题，或直接输入：我这个月哪里花钱最多？');
+    addAIMsg('bot', '????? FlowDay ? AI ???? ?\n??????????????????????????????????????????????????????????????????\n\n??????????????????????????????????');
   }
 }
 
-/* ================= 视图：主题 / 时钟 / 问候 ================= */
+/* ================= ????? / ?? / ?? ================= */
 function applyTheme(theme) {
   const root = document.documentElement;
   if (theme === 'auto') {
     const dark = matchMedia('(prefers-color-scheme: dark)').matches;
     root.dataset.theme = dark ? 'dark' : 'light';
   } else root.dataset.theme = theme;
-  $('#themeBtn').textContent = root.dataset.theme === 'dark' ? '☀️' : '🌙';
+  $('#themeBtn').textContent = root.dataset.theme === 'dark' ? '??' : '??';
 }
 
 function tickClock() {
   const now = new Date();
   $('#clock').textContent = pad(now.getHours()) + ':' + pad(now.getMinutes()) + ':' + pad(now.getSeconds());
-  $('#todayDate').textContent = now.getFullYear() + '年' + (now.getMonth() + 1) + '月' + now.getDate() + '日 星期' + WEEK[now.getDay()];
+  $('#todayDate').textContent = now.getFullYear() + '?' + (now.getMonth() + 1) + '?' + now.getDate() + '? ??' + WEEK[now.getDay()];
 }
 
 function refreshGreeting() {
   const h = new Date().getHours();
   const groups = {
-    morning: ['早上好，新的一天从计划开始 ☀️', '早安，愿你今天元气满满 ✨', '早上好，先定个小目标 🎯'],
-    noon: ['中午好，别忘了吃午饭 🍜', '中午好，休息一下再继续 💪', '中午好，下午也要加油 ⚡'],
-    afternoon: ['下午好，保持好状态 🚀', '下午好，效率满满一下午 ✍️', '下午好，离目标又近一步 🏃'],
-    evening: ['晚上好，今天辛苦啦 🌙', '晚上好，复盘一下今天的收获 📝', '晚上好，记得按时休息 🛋️'],
-    night: ['夜深了，早点休息 🌌', '深夜好，记得照顾好自己 🌙', '夜猫子出没，注意身体哦 🦉']
+    morning: ['????????????? ??', '??????????? ?', '?????????? ??'],
+    noon: ['?????????? ??', '??????????? ??', '?????????? ?'],
+    afternoon: ['????????? ??', '??????????? ??', '??????????? ??'],
+    evening: ['????????? ??', '????????????? ??', '?????????? ???'],
+    night: ['???????? ??', '??????????? ??', '??????????? ??']
   };
   const g = h < 6 ? groups.night : h < 11 ? groups.morning : h < 13 ? groups.noon : h < 18 ? groups.afternoon : h < 23 ? groups.evening : groups.night;
   $('#greeting').textContent = g[Math.floor(Math.random() * g.length)];
 }
 
-/* ================= 模块切换 / 弹窗 ================= */
+/* ================= ???? / ?? ================= */
 function switchModule(name) {
   $$('.module').forEach(m => m.classList.remove('active'));
   const target = document.getElementById('module-' + name);
@@ -2473,11 +2553,11 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-/* ================= 事件绑定 ================= */
+/* ================= ???? ================= */
 function bindEvents() {
   $$('.nav-btn').forEach(b => b.addEventListener('click', () => switchModule(b.dataset.module)));
 
-  // 任务
+  // ??
   $('#taskForm').addEventListener('submit', e => {
     e.preventDefault();
     const v = $('#taskInput').value.trim();
@@ -2501,7 +2581,7 @@ function bindEvents() {
   });
   initTaskDrag($('#taskList'));
 
-  // 日历
+  // ??
   $('#calPrev').addEventListener('click', () => { state.calCursor.setMonth(state.calCursor.getMonth() - 1); renderCalendar(); });
   $('#calNext').addEventListener('click', () => { state.calCursor.setMonth(state.calCursor.getMonth() + 1); renderCalendar(); });
   $('#calToday').addEventListener('click', () => { state.calCursor = new Date(); state.calSelected = todayStr(); renderCalendar(); });
@@ -2521,23 +2601,23 @@ function bindEvents() {
     else if (e.target.closest('.task-del')) wrap.classList.add('swiped');
   });
 
-  // 记账
+  // ??
   $('#moneyForm').addEventListener('submit', e => {
     e.preventDefault();
     const amt = parseFloat($('#recAmount').value);
-    if (!(amt > 0)) { showToast('请输入有效金额', 'err'); return; }
+    if (!(amt > 0)) { showToast('???????', 'err'); return; }
     const rec = {
       id: uid(), date: $('#recDate').value || todayStr(), type: state.recType,
       amount: Math.round(amt * 100) / 100, cat: state.recCat,
       pay: $('#recPay').value || '',
-      note: $('#recNote').value.trim() || (state.recType === 'in' ? '收入' : '支出'),
+      note: $('#recNote').value.trim() || (state.recType === 'in' ? '??' : '??'),
       source: 'manual', uniqueId: null, createdAt: Date.now()
     };
     const recs = DB.records();
     recs.push(rec);
     DB.saveRecords(recs);
     $('#recAmount').value = ''; $('#recNote').value = '';
-    showToast('已记录' + (rec.type === 'in' ? '收入' : '支出') + ' ¥' + fmtMoney(rec.amount), 'ok');
+    showToast('???' + (rec.type === 'in' ? '??' : '??') + ' ?' + fmtMoney(rec.amount), 'ok');
     renderMoney();
   });
   $('#typeSwitch').addEventListener('click', () => {
@@ -2545,7 +2625,7 @@ function bindEvents() {
     $('#typeSwitch').dataset.type = state.recType;
     $('#typeSwitch .ts-out').classList.toggle('on', state.recType === 'out');
     $('#typeSwitch .ts-in').classList.toggle('on', state.recType === 'in');
-    setCat(state.recType === 'in' ? '工资' : '餐饮');
+    setCat(state.recType === 'in' ? '??' : '??');
   });
   $('#catGrid').addEventListener('click', e => {
     const c = e.target.closest('.cat');
@@ -2561,18 +2641,18 @@ function bindEvents() {
   });
   $('#openImportBtn').addEventListener('click', openImportModal);
 
-  // 记账增强
+  // ????
   $('#budgetEditBtn').addEventListener('click', () => {
     const s = DB.settings();
     const cur = parseFloat(s.budget) || 0;
-    const v = prompt('设置每月支出预算（元），输入 0 取消预算', cur ? String(cur) : '');
+    const v = prompt('?????????????? 0 ????', cur ? String(cur) : '');
     if (v == null) return;
     const n = parseFloat(v);
-    if (isNaN(n) || n < 0) { showToast('请输入有效金额', 'err'); return; }
+    if (isNaN(n) || n < 0) { showToast('???????', 'err'); return; }
     s.budget = n > 0 ? Math.round(n * 100) / 100 : 0;
     DB.saveSettings(s);
     renderBudget();
-    showToast(n > 0 ? '预算已设置为 ¥' + fmtMoney(n) : '已取消预算', 'ok');
+    showToast(n > 0 ? '?????? ?' + fmtMoney(n) : '?????', 'ok');
   });
   $('#chartTabs').addEventListener('click', e => {
     const b = e.target.closest('button');
@@ -2610,13 +2690,13 @@ function bindEvents() {
     renderMoney();
   });
 
-  // 编辑记录弹窗
+  // ??????
   $('#recModalClose').addEventListener('click', closeRecModal);
   $('#recModal').addEventListener('click', e => { if (e.target === e.currentTarget) closeRecModal(); });
   $('#recModalForm').addEventListener('submit', e => {
     e.preventDefault();
     const amt = parseFloat($('#rmAmount').value);
-    if (!(amt > 0)) { showToast('请输入有效金额', 'err'); return; }
+    if (!(amt > 0)) { showToast('???????', 'err'); return; }
     const recs = DB.records();
     const r = recs.find(x => x.id === state.rmId);
     if (!r) return;
@@ -2629,7 +2709,7 @@ function bindEvents() {
     DB.saveRecords(recs);
     closeRecModal();
     renderMoney();
-    showToast('已保存', 'ok');
+    showToast('???', 'ok');
   });
   $('#rmDelete').addEventListener('click', () => { deleteRecord(state.rmId); closeRecModal(); });
   $('#rmTypeSwitch').addEventListener('click', () => setRMType(state.rmType === 'out' ? 'in' : 'out'));
@@ -2641,11 +2721,11 @@ function bindEvents() {
     }
   });
 
-  // 专注
+  // ??
   $('#focusBtn').addEventListener('click', () => { if (Focus.running) pauseFocus(); else startFocus(); });
   $('#focusReset').addEventListener('click', resetFocus);
   $$('#focusPresets button').forEach(b => b.addEventListener('click', () => {
-    if (Focus.running) { showToast('请先暂停计时', 'info'); return; }
+    if (Focus.running) { showToast('??????', 'info'); return; }
     const d = +b.dataset.d;
     Focus.duration = d * 60;
     Focus.remaining = d * 60;
@@ -2654,7 +2734,7 @@ function bindEvents() {
     renderFocus();
   }));
 
-  // 主题
+  // ??
   $('#themeBtn').addEventListener('click', () => {
     const s = DB.settings();
     s.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
@@ -2662,7 +2742,7 @@ function bindEvents() {
     applyTheme(s.theme);
   });
 
-  // 数据备份
+  // ????
   $('#backupBtn').addEventListener('click', e => {
     e.stopPropagation();
     const pop = $('#backupPop');
@@ -2675,7 +2755,7 @@ function bindEvents() {
     e.target.value = '';
   });
 
-  // AI 理财助手
+  // AI ????
   $('#aiFab').addEventListener('click', () => {
     const p = $('#aiPanel');
     p.hidden = !p.hidden;
@@ -2697,11 +2777,11 @@ function bindEvents() {
   ['aiBase', 'aiModel', 'aiKey'].forEach(id => $('#' + id).addEventListener('change', saveAISettings));
   $('#aiTest').addEventListener('click', testAIConnection);
 
-  // 导入弹窗
+  // ????
   $('#modalClose').addEventListener('click', closeModal);
   $('#importModal').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
 
-  // 优先级菜单
+  // ?????
   $('#priPopup').addEventListener('click', e => {
     const btn = e.target.closest('button');
     if (!btn) return;
@@ -2721,7 +2801,7 @@ function bindEvents() {
     if (e.target.closest('.task-list, .rec-list, .drop-zone')) e.preventDefault();
   });
 
-  // 快捷键
+  // ???
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       if (!$('#importModal').hidden) closeModal();
@@ -2737,7 +2817,7 @@ function bindEvents() {
   });
 }
 
-/* ================= 启动 ================= */
+/* ================= ?? ================= */
 function init() {
   initImportPanel($('#importPanelModule'));
   initImportPanel($('#importPanelModal'));

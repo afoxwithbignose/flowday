@@ -34,6 +34,8 @@ public class MainActivity extends Activity {
         s.setLoadWithOverviewMode(true);
         s.setUseWideViewPort(true);
         s.setSupportZoom(false);
+        // ?? WebView ??????????/?????????? App ??????
+        web.setLongClickable(false);
 
         // FlowDay is a self-contained local page. These flags let its own
         // download/import features and optional AI requests work normally.
@@ -53,7 +55,7 @@ public class MainActivity extends Activity {
                 filePathCallback = callback;
                 try {
                     startActivityForResult(
-                            Intent.createChooser(params.createIntent(), "选择文件"),
+                            Intent.createChooser(params.createIntent(), "????"),
                             REQ_FILE_CHOOSER);
                 } catch (Exception e) {
                     filePathCallback = null;
