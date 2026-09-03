@@ -32,6 +32,8 @@ jobs:
           KEY_PASSWORD=$(openssl rand -hex 16)
           echo "STORE_PASSWORD=$STORE_PASSWORD" >> "$GITHUB_ENV"
           echo "KEY_PASSWORD=$KEY_PASSWORD" >> "$GITHUB_ENV"
+          echo "STORE_FILE=$RUNNER_TEMP/flowday.keystore" >> "$GITHUB_ENV"
+          echo "KEY_ALIAS=flowday" >> "$GITHUB_ENV"
           keytool -genkeypair -v -keystore "$RUNNER_TEMP/flowday.keystore" \
             -alias flowday -keyalg RSA -keysize 2048 -validity 10950 \
             -storepass "$STORE_PASSWORD" -keypass "$KEY_PASSWORD" \
@@ -39,11 +41,6 @@ jobs:
 
       - name: Build release APK
         run: /tmp/gradle-8.10.2/bin/gradle -p android assembleRelease --no-daemon
-        env:
-          STORE_FILE: ${{ runner.temp }}/flowday.keystore
-          STORE_PASSWORD: ${{ env.STORE_PASSWORD }}
-          KEY_ALIAS: flowday
-          KEY_PASSWORD: ${{ env.KEY_PASSWORD }}
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
