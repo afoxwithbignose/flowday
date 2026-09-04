@@ -130,6 +130,11 @@ input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline
 .task-del{width:28px;height:28px;flex:none;border-radius:9px;color:var(--text-3);font-size:15px;opacity:0;transition:.2s;display:grid;place-items:center}
 .task-wrap:hover .task-del{opacity:1}
 .task-del:hover{background:rgba(244,63,94,.12);color:var(--red)}
+.task-grip{width:26px;height:26px;flex:none;border-radius:8px;color:var(--text-3);font-size:14px;display:grid;place-items:center;cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none}
+.task-grip:hover{color:var(--accent);background:rgba(91,108,255,.08)}
+.task-grip:active{cursor:grabbing}
+.task-item.dragging .task-grip{cursor:grabbing}
+.pri-tag{font-size:10px;font-weight:800;padding:1px 6px;border-radius:7px;color:#fff;line-height:1.5}
 .task-wrap.swiped .task-item{transform:translateX(-88px)}
 .task-wrap.swiped .task-del{opacity:0}
 .empty{text-align:center;padding:46px 10px;color:var(--text-3)}
@@ -368,6 +373,10 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
 .pri-popup b{font-size:11px;color:var(--text-3);padding:4px 10px 6px;font-weight:600}
 .pri-popup button{text-align:left;padding:8px 10px;border-radius:9px;font-size:13px;font-weight:600;transition:.15s}
 .pri-popup button:hover{background:rgba(91,108,255,.1)}
+.pri-dur{display:flex;align-items:center;gap:6px;border-top:1px solid var(--line);margin-top:4px;padding-top:6px}
+.pri-dur input{flex:1;min-width:0;width:56px;padding:7px 8px;border-radius:9px;border:1px solid var(--line);background:var(--card-strong);font-size:12.5px;outline:none}
+.pri-dur input:focus{border-color:var(--accent)}
+.pri-dur button{flex:none;padding:7px 10px;background:var(--accent);color:#fff;font-weight:700;border-radius:9px;font-size:12px}
 .backup-pop{position:fixed;top:calc(var(--top-h) + 10px);right:22px;z-index:90;width:236px;background:var(--card-strong);backdrop-filter:blur(20px);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:14px;display:flex;flex-direction:column;gap:8px;animation:popIn .22s ease}
 .backup-pop[hidden]{display:none}
 .backup-pop b{font-size:13.5px}
@@ -375,8 +384,9 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
 .backup-pop button{padding:9px 12px;border-radius:10px;font-size:13px;font-weight:600;transition:.2s;border:1px solid var(--line);background:var(--card);text-align:center}
 .backup-pop button:hover{transform:translateY(-1px);box-shadow:var(--shadow-sm);color:var(--accent)}
 .backup-pop small{font-size:10.5px;color:var(--red);opacity:.9;line-height:1.5}
-.ai-fab{position:fixed;right:22px;bottom:26px;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;font-size:24px;font-weight:800;box-shadow:0 10px 26px rgba(91,108,255,.45);z-index:120;display:grid;place-items:center;transition:.3s}
+.ai-fab{position:fixed;right:22px;bottom:26px;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;font-size:24px;font-weight:800;box-shadow:0 10px 26px rgba(91,108,255,.45);z-index:120;display:grid;place-items:center;transition:.3s;touch-action:none;-webkit-user-select:none;user-select:none}
 .ai-fab:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 14px 32px rgba(91,108,255,.55)}
+.ai-fab.dragging{transition:none;transform:none;box-shadow:0 18px 44px rgba(91,108,255,.6);cursor:grabbing}
 .ai-panel{position:fixed;right:22px;bottom:96px;width:min(400px,calc(100vw - 28px));max-height:min(660px,calc(100vh - 130px));border-radius:22px;z-index:130;display:flex;flex-direction:column;overflow:hidden;animation:popIn .3s cubic-bezier(.2,.9,.3,1.15)}
 .ai-panel[hidden]{display:none}
 .ai-head{display:flex;align-items:flex-start;justify-content:space-between;padding:16px 16px 10px;border-bottom:1px solid var(--line);gap:10px}
@@ -405,6 +415,7 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
 .ai-settings-toggle{font-size:11.5px;color:var(--text-3);transition:.2s;padding:4px 8px;border-radius:8px}
 .ai-settings-toggle:hover{color:var(--accent);background:rgba(91,108,255,.08)}
 .ai-settings-body{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.ai-settings-body[hidden]{display:none!important}
 .ai-settings-body input{padding:9px 11px;border-radius:10px;border:1px solid var(--line);background:var(--card-strong);font-size:12.5px;outline:none;transition:.2s}
 .ai-settings-body input:focus{border-color:var(--accent)}
 .ai-settings-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
@@ -614,10 +625,6 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5S4 15.8 4 10a4.6 4.6 0 017.8-3.1L12 7.4l.2-.5A4.6 4.6 0 0120 10c0 5.8-8 10.5-8 10.5z"/><path d="M8.5 10.5h3M10 9v3"/></svg>
     <span>健康</span>
   </button>
-  <button class="nav-btn nav-import" data-module="import" title="导入账单">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15.5V4.5m0 0L8 8.5m4-4l4 4"/><path d="M4.5 15.5v2.5a2 2 0 002 2h11a2 2 0 002-2v-2.5"/></svg>
-    <span>导入</span>
-  </button>
 </nav>
 
 <main class="main">
@@ -649,7 +656,7 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
     </div>
     <form class="task-add glass" id="taskForm">
       <span class="add-ico">＋</span>
-      <input id="taskInput" placeholder="输入任务，回车添加 · 试试「明天下午3点开会」" autocomplete="off"/>
+      <input id="taskInput" placeholder="试试「明天下午3点开会30分钟」" autocomplete="off"/>
       <button type="submit">添加</button>
     </form>
     <ul class="task-list" id="taskList"></ul>
@@ -688,7 +695,7 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
         </div>
         <form class="task-add mini glass" id="calAddForm">
           <span class="add-ico">＋</span>
-          <input id="calAddInput" placeholder="给这一天添加任务" autocomplete="off"/>
+          <input id="calAddInput" placeholder="给这一天添加任务（可加时长 30分钟）" autocomplete="off"/>
           <button type="submit">添加</button>
         </form>
         <ul class="task-list" id="calTaskList"></ul>
@@ -846,17 +853,6 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
       <div class="fs-item"><b id="statAllCount">0</b><span>累计次数</span></div>
       <div class="fs-item"><b id="statAllMin">0 分钟</b><span>累计时长</span></div>
     </div>
-  </section>
-
-  <!-- 导入 -->
-  <section class="module" id="module-import">
-    <div class="module-head">
-      <div>
-        <h2>导入账单</h2>
-        <p class="module-sub">支持微信 / 支付宝 / 建行 / 中信 CSV / XLSX 账单，自动识别与去重</p>
-      </div>
-    </div>
-    <div class="import-panel-root" id="importPanelModule"></div>
   </section>
 
   <!-- 健康模块 -->
@@ -1083,11 +1079,15 @@ table.res-table{width:100%;border-collapse:collapse;font-size:12.5px}
 
 <!-- 优先级菜单 -->
 <div class="pri-popup" id="priPopup" hidden>
-  <b>设置优先级</b>
-  <button data-p="2">🔴 高</button>
-  <button data-p="1">🟠 中</button>
-  <button data-p="0">🔵 低</button>
-  <button data-p="-1">清除</button>
+  <b>优先级 · 颜色规则</b>
+  <button data-p="2" style="color:#f43f5e">🔴 高优先级（红）</button>
+  <button data-p="1" style="color:#f59e0b">🟠 中优先级（橙）</button>
+  <button data-p="0" style="color:#3b82f6">🔵 低优先级（蓝）</button>
+  <button data-p="-1" style="color:var(--text-3)">🚫 清除颜色</button>
+  <div class="pri-dur">
+    <input id="priDur" type="number" min="5" step="5" placeholder="预计时长(分)" inputmode="numeric"/>
+    <button type="button" id="priDurBtn">改时长</button>
+  </div>
 </div>
 
 <!-- 数据备份弹层 -->
@@ -1165,6 +1165,13 @@ const formatDateCN = ds => {
   const d = parseDateStr(ds);
   return (d.getMonth() + 1) + '月' + d.getDate() + '日 周' + WEEK[d.getDay()];
 };
+function formatDur(min) {
+  min = Math.max(1, Math.round(Number(min) || 0));
+  const h = Math.floor(min / 60), r = min % 60;
+  if (h && r) return h + '小时' + r + '分';
+  if (h) return h + '小时';
+  return r + '分钟';
+}
 function showToast(msg, type, actions) {
   const el = document.createElement('div');
   el.className = 'toast ' + (type || 'info');
@@ -1231,7 +1238,7 @@ const state = {
 
 /* ================= 自然语言解析（任务） ================= */
 function parseTaskInput(raw) {
-  const out = { date: todayStr(), time: null, text: String(raw || '').trim() };
+  const out = { date: todayStr(), time: null, durMin: null, text: String(raw || '').trim() };
   let t = String(raw || '').trim();
   const now = new Date();
   const addDays = n => { const d = new Date(now); d.setDate(d.getDate() + n); return todayStr(d); };
@@ -1270,6 +1277,19 @@ function parseTaskInput(raw) {
     if (h <= 23 && min <= 59) {
       out.time = pad(h) + ':' + pad(min);
       t = t.replace(timeM[0], ' ');
+    }
+  }
+
+  // 预计时长：支持 30分钟 / 1小时 / 1小时30分 / 45min / 0.5小时
+  const hourM = t.match(/(\d+(?:\.\d+)?)\s*小时(?:\s*(\d+)\s*分(?:钟)?)?/);
+  if (hourM) {
+    out.durMin = Math.round(parseFloat(hourM[1]) * 60) + (hourM[2] ? +hourM[2] : 0);
+    t = t.replace(hourM[0], ' ');
+  } else {
+    const minM = t.match(/(\d+(?:\.\d+)?)\s*(?:分钟|min(?:s)?)/i) || t.match(/(?:约|大概)?\s*(\d{1,3})\s*分(?!钟)/);
+    if (minM) {
+      out.durMin = Math.round(parseFloat(minM[1] || minM[2]));
+      t = t.replace(minM[0], ' ');
     }
   }
 
@@ -1800,6 +1820,7 @@ function initImportPanel(root) {
 
 /* ================= 视图：任务 ================= */
 const PRI_COLORS = { 2: '#f43f5e', 1: '#f59e0b', 0: '#3b82f6' };
+const PRI_NAMES = { 2: '高', 1: '中', 0: '低' };
 const CAT_ICONS = { 餐饮: '🍜', 交通: '🚇', 购物: '🛍️', 娱乐: '🎬', 住房: '🏠', 工资: '💰', 医疗: '🏥', 教育: '📚', 旅行: '✈️', 日用: '🧴', 其他: '📦' };
 const CAT_KEYS = Object.keys(CAT_ICONS);
 const PAYS = ['微信', '支付宝', '现金', '银行卡', '信用卡', '其他'];
@@ -1808,16 +1829,19 @@ function taskHTML(t, opts) {
   opts = opts || {};
   const meta = [];
   if (t.time) meta.push('🕐 ' + t.time);
+  if (t.durMin) meta.push('⏱ ' + formatDur(t.durMin));
   meta.push(formatDateCN(t.date));
   const priColor = t.pri >= 0 ? PRI_COLORS[t.pri] : null;
+  const priTag = t.pri >= 0 ? '<span class="pri-tag" style="background:' + priColor + '">' + PRI_NAMES[t.pri] + '</span>' : '';
   return '<li class="task-wrap" data-id="' + t.id + '"' + (priColor ? ' style="border-left:3px solid ' + priColor + '"' : '') + '>' +
     '<button type="button" class="del-bg">删除</button>' +
     '<div class="task-item swipe-target ' + (t.done ? 'done' : '') + '"' + (opts.drag === false ? '' : ' draggable="true"') + '>' +
       '<span class="task-circle">✓</span>' +
       '<div class="task-body">' +
         '<span class="task-text">' + esc(t.text) + '</span>' +
-        '<span class="task-meta">' + meta.join(' · ') + (t.pri >= 0 ? '<span class="pri-dot pri-' + t.pri + '"></span>' : '') + '</span>' +
+        '<span class="task-meta">' + meta.join(' · ') + priTag + (t.pri >= 0 ? '<span class="pri-dot pri-' + t.pri + '"></span>' : '') + '</span>' +
       '</div>' +
+      '<button type="button" class="task-grip" title="按住拖动排序">⠿</button>' +
       '<button type="button" class="task-del" title="删除">✕</button>' +
     '</div>' +
   '</li>';
@@ -1834,6 +1858,7 @@ function renderRing() {
   const ts = DB.tasks().filter(t => t.date === todayStr());
   const done = ts.filter(t => t.done).length;
   const total = ts.length;
+  const durMin = ts.reduce((a, t) => a + (Number(t.durMin) || 0), 0);
   const pct = total ? Math.round(done / total * 100) : 0;
   const C = 2 * Math.PI * 52;
   const bar = $('#ringBar');
@@ -1843,7 +1868,7 @@ function renderRing() {
   $('#ringDone').textContent = done + '/' + total + ' 完成';
   $('#taskTotal').textContent = total;
   $('#taskDoneNum').textContent = done;
-  $('#taskSub').textContent = total ? (done === total ? '今日任务全部完成，太棒了 🎉' : '今日 ' + total + ' 项 · 已完成 ' + done) : '新的一天，从列好计划开始';
+  $('#taskSub').textContent = total ? (done === total ? '今日任务全部完成，太棒了 🎉' : '今日 ' + total + ' 项 · 已完成 ' + done + (durMin ? ' · 预计 ' + formatDur(durMin) : '')) : '新的一天，从列好计划开始';
 }
 
 function renderTasks() {
@@ -1883,7 +1908,7 @@ function addTask(raw, date) {
   if (!p.text) return;
   const ts = DB.tasks();
   const maxOrder = ts.reduce((mx, x) => Math.max(mx, x.order || 0), -1);
-  ts.push({ id: uid(), text: p.text, date: p.date, time: p.time, done: false, pri: -1, order: maxOrder + 1, createdAt: Date.now() });
+  ts.push({ id: uid(), text: p.text, date: p.date, time: p.time, durMin: p.durMin || 0, done: false, pri: -1, order: maxOrder + 1, createdAt: Date.now() });
   DB.saveTasks(ts);
   refreshAll();
   showToast('已添加：' + p.text, 'ok');
@@ -1926,12 +1951,7 @@ function initTaskDrag(list) {
   });
   list.addEventListener('dragend', () => {
     if (dragEl) { const it = dragEl.querySelector('.task-item'); if (it) it.classList.remove('dragging'); dragEl = null; }
-    const orderMap = {};
-    $$('.task-wrap', list).forEach((el, i) => { orderMap[el.dataset.id] = i; });
-    const ts = DB.tasks();
-    ts.forEach(t => { if (orderMap[t.id] != null) t.order = orderMap[t.id]; });
-    DB.saveTasks(ts);
-    renderTasks();
+    persistTaskOrder(list);
   });
   list.addEventListener('dragover', e => {
     e.preventDefault();
@@ -1952,6 +1972,51 @@ function getDragAfterEl(list, y) {
     if (off < 0 && off > closestOff) { closestOff = off; closest = it; }
   }
   return closest ? closest.closest('.task-wrap') : null;
+}
+function persistTaskOrder(list) {
+  const orderMap = {};
+  $$('.task-wrap', list).forEach((el, i) => { orderMap[el.dataset.id] = i; });
+  const ts = DB.tasks();
+  ts.forEach(t => { if (orderMap[t.id] != null) t.order = orderMap[t.id]; });
+  DB.saveTasks(ts);
+  renderTasks();
+}
+function initTouchSort(list) {
+  let wrap = null, item = null, sy = 0, pid = null;
+  list.addEventListener('pointerdown', e => {
+    if (!e.target.closest('.task-grip')) return;
+    e.preventDefault();
+    wrap = e.target.closest('.task-grip').closest('.task-wrap');
+    item = wrap ? wrap.querySelector('.task-item') : null;
+    if (!wrap || !item) return;
+    sy = e.clientY;
+    pid = e.pointerId;
+    try { wrap.setPointerCapture(pid); } catch (err) {}
+    item.classList.add('dragging');
+  });
+  list.addEventListener('pointermove', e => {
+    if (!wrap || e.pointerId !== pid) return;
+    e.preventDefault();
+    item.style.transform = 'translateY(' + (e.clientY - sy) + 'px)';
+    const after = getDragAfterEl(list, e.clientY);
+    const cur = wrap;
+    if (after == null) {
+      if (cur !== list.lastElementChild) list.appendChild(cur);
+    } else if (after !== cur) {
+      list.insertBefore(cur, after);
+    }
+  });
+  const end = () => {
+    if (!wrap) return;
+    try { wrap.releasePointerCapture(pid); } catch (err) {}
+    item.classList.remove('dragging');
+    item.style.transform = '';
+    const list2 = wrap.parentNode;
+    wrap = null; item = null; pid = null;
+    persistTaskOrder(list2);
+  };
+  list.addEventListener('pointerup', end);
+  list.addEventListener('pointercancel', end);
 }
 
 /* 左滑删除（触屏） */
@@ -1989,7 +2054,7 @@ function initLongPress(el, cb) {
   const cancel = () => { clearTimeout(timer); timer = null; };
   el.addEventListener('pointerdown', e => {
     if (e.pointerType === 'mouse' && e.button !== 0) return;
-    if (e.target.closest('.task-circle, .task-del, .del-bg')) return;
+    if (e.target.closest('.task-circle, .task-del, .task-grip, .del-bg')) return;
     sx = e.clientX; sy = e.clientY;
     timer = setTimeout(() => { timer = null; cb(e.clientX, e.clientY); }, 550);
   });
@@ -2005,6 +2070,8 @@ function openPriMenu(id, x, y) {
   const pop = $('#priPopup');
   pop.hidden = false;
   pop.dataset.id = id;
+  const task = DB.tasks().find(t => t.id === id);
+  if (task) $('#priDur').value = task.durMin || '';
   pop.style.left = '0px'; pop.style.top = '0px';
   requestAnimationFrame(() => {
     const r = pop.getBoundingClientRect();
@@ -2648,7 +2715,7 @@ function buildTaskContext() {
   const sorted = [...todo].sort((a, b) =>
     (a.date + ' ' + (a.time || '')).localeCompare(b.date + ' ' + (b.time || '')) || (a.order || 0) - (b.order || 0));
   lines.push('未完成任务清单（' + sorted.length + ' 项，最多展示 200 条）：');
-  sorted.slice(0, 200).forEach(t => lines.push('- ' + t.date + (t.time ? ' ' + t.time : '') + ' [' + priLabel(t.pri) + '] ' + t.text));
+  sorted.slice(0, 200).forEach(t => lines.push('- ' + t.date + (t.time ? ' ' + t.time : '') + (t.durMin ? ' 预计' + formatDur(t.durMin) : '') + ' [' + priLabel(t.pri) + '] ' + t.text));
   if (sorted.length > 200) lines.push('…其余 ' + (sorted.length - 200) + ' 项未列出');
   return lines.join('\n');
 }
@@ -3437,6 +3504,7 @@ function bindHealthEvents() {
 function bindEvents() {
   $$('.nav-btn').forEach(b => b.addEventListener('click', () => switchModule(b.dataset.module)));
   bindHealthEvents();
+  initAiFabDrag();
 
   // 任务
   $('#taskForm').addEventListener('submit', e => {
@@ -3461,6 +3529,7 @@ function bindEvents() {
     else if (e.target.closest('.task-del')) wrap.classList.add('swiped');
   });
   initTaskDrag($('#taskList'));
+  initTouchSort($('#taskList'));
 
   // 日历
   $('#calPrev').addEventListener('click', () => { state.calCursor.setMonth(state.calCursor.getMonth() - 1); renderCalendar(); });
@@ -3638,6 +3707,7 @@ function bindEvents() {
 
   // AI 管理助手
   $('#aiFab').addEventListener('click', () => {
+    if ($('#aiFab').dataset.moved === '1') { $('#aiFab').dataset.moved = ''; return; }
     const p = $('#aiPanel');
     p.hidden = !p.hidden;
     if (!p.hidden) openAIPanel();
@@ -3664,11 +3734,22 @@ function bindEvents() {
 
   // 优先级菜单
   $('#priPopup').addEventListener('click', e => {
-    const btn = e.target.closest('button');
-    if (!btn) return;
     const id = $('#priPopup').dataset.id;
     const ts = DB.tasks();
     const t = ts.find(x => x.id === id);
+    if (e.target.closest('#priDurBtn')) {
+      if (t) {
+        const v = Math.max(0, Math.round(parseFloat($('#priDur').value) || 0));
+        t.durMin = v;
+        DB.saveTasks(ts);
+        refreshAll();
+        showToast(v ? '已设预计时长 ' + formatDur(v) : '已清除预计时长', 'ok');
+      }
+      $('#priPopup').hidden = true;
+      return;
+    }
+    const btn = e.target.closest('button[data-p]');
+    if (!btn) return;
     if (t) { t.pri = +btn.dataset.p; DB.saveTasks(ts); refreshAll(); }
     $('#priPopup').hidden = true;
   });
@@ -3690,7 +3771,7 @@ function bindEvents() {
       return;
     }
     if (e.ctrlKey && !e.shiftKey && !e.altKey) {
-      const map = { '1': 'tasks', '2': 'calendar', '3': 'money', '4': 'focus', '5': 'import' };
+      const map = { '1': 'tasks', '2': 'calendar', '3': 'money', '4': 'focus', '5': 'health' };
       if (map[e.key]) { e.preventDefault(); switchModule(map[e.key]); }
       else if (e.key === 'n' || e.key === 'N') { e.preventDefault(); switchModule('tasks'); $('#taskInput').focus(); }
       else if (e.key === 'u' || e.key === 'U') { e.preventDefault(); openImportModal(); }
@@ -3698,9 +3779,57 @@ function bindEvents() {
   });
 }
 
+function initAiFabDrag() {
+  const fab = $('#aiFab');
+  const s0 = DB.settings();
+  if (isFinite(s0.aiFabX) && isFinite(s0.aiFabY)) {
+    fab.style.left = s0.aiFabX + 'px';
+    fab.style.top = s0.aiFabY + 'px';
+    fab.style.right = 'auto';
+    fab.style.bottom = 'auto';
+  }
+  let sx = 0, sy = 0, ox = 0, oy = 0, moved = false, pid = null;
+  fab.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    const r = fab.getBoundingClientRect();
+    sx = e.clientX; sy = e.clientY; ox = r.left; oy = r.top;
+    moved = false; pid = e.pointerId;
+    fab.classList.add('dragging');
+    try { fab.setPointerCapture(pid); } catch (err) {}
+  });
+  fab.addEventListener('pointermove', e => {
+    if (e.pointerId !== pid) return;
+    e.preventDefault();
+    const dx = e.clientX - sx, dy = e.clientY - sy;
+    if (Math.abs(dx) > 4 || Math.abs(dy) > 4) moved = true;
+    const size = fab.getBoundingClientRect().width || 56;
+    const left = Math.max(4, Math.min(innerWidth - size - 4, ox + dx));
+    const top = Math.max(4, Math.min(innerHeight - size - 60, oy + dy));
+    fab.style.left = left + 'px';
+    fab.style.top = top + 'px';
+    fab.style.right = 'auto';
+    fab.style.bottom = 'auto';
+  });
+  const end = e => {
+    if (e.pointerId !== pid) return;
+    pid = null;
+    fab.classList.remove('dragging');
+    if (moved) {
+      fab.dataset.moved = '1';
+      setTimeout(() => { if (fab.dataset.moved === '1') fab.dataset.moved = ''; }, 150);
+      const s = DB.settings();
+      const r = fab.getBoundingClientRect();
+      s.aiFabX = Math.round(r.left);
+      s.aiFabY = Math.round(r.top);
+      DB.saveSettings(s);
+    }
+  };
+  fab.addEventListener('pointerup', end);
+  fab.addEventListener('pointercancel', end);
+}
+
 /* ================= 启动 ================= */
 function init() {
-  initImportPanel($('#importPanelModule'));
   initImportPanel($('#importPanelModal'));
   applyTheme(DB.settings().theme);
   bindEvents();
